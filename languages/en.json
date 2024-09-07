@@ -1,4 +1,13 @@
 {
+    "BREAKERS-SHEETS": {
+        "SheetConfig": {
+            "character": "Breakers Character Sheet",
+            "tabs": {
+                "talents": "Talents",
+                "equipment": "Equipment & Speed"
+            }
+        }
+    },
     "WOD-TURBO-BREAKERS-PBTA-FOUNDRYVTT": {
         "CharacterSheets": {
             "rollResults": {

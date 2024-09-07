@@ -31,7 +31,7 @@
     "./module/wod-turbo-breakers-pbta-foundryvtt.mjs"
   ],
   "styles": [
-    "./styles/wod-turbo-breakers-pbta-foundryvtt.css"
+      "css/breakers-sheets.css"
   ],
   "languages": [
     {

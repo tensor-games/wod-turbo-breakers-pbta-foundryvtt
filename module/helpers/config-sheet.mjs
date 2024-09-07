@@ -12,12 +12,17 @@ export const configSheet = async () => {
             partial: {
                 start: 7,
                 end: 9,
-                label: "Partial Hit"
+                label: "Partial Success"
             },
             success: {
                 start: 10,
                 end: 12,
-                label: "Full Hit!"
+                label: "Full Success!"
+            },
+            crit_success: {
+              start: 12,
+              end: 15,
+              label: "Critical Success!"
             }
         },
         actorTypes: {
@@ -43,7 +48,7 @@ export const configSheet = async () => {
                         type: "LongText",
                         playbook: true,
                     },
-                    regard: {
+                    background: {
                         position: "Left",
                         label: "Background",
                         type: "LongText",

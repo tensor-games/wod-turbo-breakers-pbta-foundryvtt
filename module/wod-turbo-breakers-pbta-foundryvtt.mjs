@@ -1,7 +1,17 @@
 import { configSheet } from "./helpers/config-sheet.mjs"
+import * as utils from "./helpers/utils.mjs";
+import {BreakersActorSheetMixin} from "./sheets/actor-sheet.mjs";
 
 // once the game has initialized, set up the module
 Hooks.once('init', () => {
+
+    const breakersActorSheet = BreakersActorSheetMixin(game.pbta.applications.actor.PbtaActorSheet);
+    Actors.unregisterSheet('pbta', game.pbta.applications.actor.PbtaActorSheet, { types: ['character'] });
+    Actors.registerSheet('pbta', breakersActorSheet, {
+        types: ['character'],
+        makeDefault: true,
+        label: 'BREAKERS-SHEETS.SheetConfig.character',
+    });
 
     // register wod-turbo-breakers-pbta-foundryvtt settings
     game.settings.register('wod-turbo-breakers-pbta-foundryvtt', 'settings-override', {
@@ -16,6 +26,8 @@ Hooks.once('init', () => {
         }, 500)
     });
 
+    // Preload Handlebars stuff.
+    utils.preloadHandlebarsTemplates();
 })
 
 Hooks.once('pbtaSheetConfig', () => {
