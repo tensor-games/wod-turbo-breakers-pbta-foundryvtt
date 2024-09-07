@@ -1,0 +1,52 @@
+{
+  "name": "TOUGH",
+  "type": "move",
+  "_id": "Wut2EAkU8M7kGsaL",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "description": "<p>You get +6 HP.</p>",
+    "moveType": "",
+    "rollFormula": "",
+    "moveResults": {
+      "failure": {
+        "key": "system.moveResults.failure.value",
+        "label": "Miss",
+        "value": ""
+      },
+      "partial": {
+        "key": "system.moveResults.partial.value",
+        "label": "Partial Hit",
+        "value": ""
+      },
+      "success": {
+        "key": "system.moveResults.success.value",
+        "label": "Full Hit!",
+        "value": ""
+      }
+    },
+    "uses": 0,
+    "rollType": "",
+    "rollMod": 0,
+    "actorType": "",
+    "choices": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "FFGBnT7Qc5JYvJUu": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.328",
+    "systemId": "pbta",
+    "systemVersion": "1.0.20",
+    "createdTime": 1725675772575,
+    "modifiedTime": 1725675801830,
+    "lastModifiedBy": "FFGBnT7Qc5JYvJUu"
+  },
+  "_key": "!items!Wut2EAkU8M7kGsaL"
+}

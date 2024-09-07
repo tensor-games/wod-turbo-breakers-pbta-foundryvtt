@@ -1,6 +1,6 @@
 {
   "id": "wod-turbo-breakers-pbta-foundryvtt",
-  "title": "World of Dungeons: Turbo: Breakers PBTA FoundryVTT"
+  "title": "World of Dungeons: Turbo: Breakers PBTA FoundryVTT",
   "description": "World of Dungeons: Turbo: Breakers custom sheet and compendium module, to be used with the Powered by the Apocalypse (PbtA) system.",
   "authors": [
     {
@@ -42,17 +42,6 @@
   ],
   "packs": [
     {
-      "name": "basic-moves",
-      "label": "Basic Moves",
-      "path": "packs/basic-moves",
-      "type": "Item",
-      "system": "pbta",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
       "name": "talents",
       "label": "Talents",
       "system": "pbta",
@@ -69,5 +58,5 @@
   "manifest": "#{MANIFEST}#",
   "download": "#{DOWNLOAD}#",
   "license": "LICENSE",
-  "readme": "README.md",
+  "readme": "README.md"
 }
