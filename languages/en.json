@@ -1,0 +1,32 @@
+{
+    "WOD-TURBO-BREAKERS-PBTA-FOUNDRYVTT": {
+        "CharacterSheets": {
+            "rollResults": {
+                "complications": "tbd",
+                "partialSuccess": "tbd",
+                "success": "tbd"
+            },
+            "stats": {
+                "one": "tbd",
+                "two": "tbd",
+                "three": "tbd"
+            },
+            "statToggle": "tbd",
+            "details": {
+                "biographyLabel": "tbd"
+            },
+            "moveTypes": {
+                "basicLabel": "tbd",
+                "playbookLabel": "tbd"
+            }
+        },
+        "NPCSheets": {
+            "details": {
+                "biographyLabel": "tbd"
+            },
+            "moveTypes": {
+                "basicLabel": "tbd"
+            }
+        }
+    }
+}

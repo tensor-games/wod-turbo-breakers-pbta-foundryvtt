@@ -1,0 +1,30 @@
+{
+  "name": "wod-turbo-breakers-pbta-foundryvtt",
+  "version": "1.0.0",
+  "description": "CSS compiler & linting for the PbtA World of Dungeons: Turbo: Breakers system",
+  "author": "Jeremy Tidwell",
+  "license": "MIT",
+  "private": true,
+  "browserslist": [
+    "last 3 versions"
+  ],
+  "scripts": {
+    "build": "gulp build",
+    "compile": "gulp css",
+    "watch": "gulp",
+    "gulp": "gulp",
+    "pushLDBtoJSON": "node ./tools/pushLDBtoJSON.mjs",
+    "pullJSONtoLDB": "node ./tools/pullJSONtoLDB.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.3.0",
+    "@foundryvtt/foundryvtt-cli": "^1.0.2",
+    "eslint": "^9.3.0",
+    "globals": "^15.2.0",
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "sass": "^1.53.0"
+  }
+}

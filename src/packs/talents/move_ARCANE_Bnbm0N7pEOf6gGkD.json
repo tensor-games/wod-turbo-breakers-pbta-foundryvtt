@@ -1,0 +1,52 @@
+{
+  "name": "ARCANE",
+  "type": "move",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "description": "<div class=\"page\" title=\"Page 1\">\n<div class=\"layoutArea\">\n<div class=\"column\">\n<div class=\"page\" title=\"Page 7\">\n<div class=\"layoutArea\">\n<div class=\"column\">\n<p>You can attempt to control magical energy. This is very dangerous, but hey, magic powers.</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>",
+    "moveType": "roleMoves",
+    "rollFormula": "",
+    "moveResults": {
+      "failure": {
+        "key": "system.moveResults.failure.value",
+        "label": "Miss",
+        "value": ""
+      },
+      "partial": {
+        "key": "system.moveResults.partial.value",
+        "label": "Partial Hit",
+        "value": ""
+      },
+      "success": {
+        "key": "system.moveResults.success.value",
+        "label": "Full Hit!",
+        "value": ""
+      }
+    },
+    "uses": 0,
+    "rollType": "",
+    "rollMod": 0,
+    "actorType": "",
+    "choices": ""
+  },
+  "effects": [],
+  "folder": null,
+  "ownership": {
+    "default": 0,
+    "ZxkUcPIs5HSaJ2Mm": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.328",
+    "systemId": "pbta",
+    "systemVersion": "1.0.20",
+    "createdTime": 1720224663873,
+    "modifiedTime": 1720224681397,
+    "lastModifiedBy": "ZxkUcPIs5HSaJ2Mm"
+  },
+  "_id": "Bnbm0N7pEOf6gGkD",
+  "sort": 200000,
+  "_key": "!items!Bnbm0N7pEOf6gGkD"
+}
