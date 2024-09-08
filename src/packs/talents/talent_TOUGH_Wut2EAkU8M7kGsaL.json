@@ -5,7 +5,7 @@
   "img": "icons/svg/shield.svg",
   "system": {
     "description": "<p>You get +6 HP.</p>",
-    "moveType": "",
+    "moveType": "talent",
     "rollFormula": "",
     "moveResults": {
       "failure": {

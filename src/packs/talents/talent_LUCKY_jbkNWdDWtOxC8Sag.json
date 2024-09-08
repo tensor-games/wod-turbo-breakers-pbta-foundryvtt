@@ -1,11 +1,11 @@
 {
-  "name": "MEDIC",
+  "name": "LUCKY",
   "type": "move",
-  "_id": "LLHplTwLQsbJVa5F",
-  "img": "icons/svg/heal.svg",
+  "_id": "jbkNWdDWtOxC8Sag",
+  "img": "icons/svg/card-joker.svg",
   "system": {
-    "description": "<p>You can use first aid during a conflict. During a rest, give +1d healing.</p>",
-    "moveType": "",
+    "description": "<p>Once per expedition, avoid a bad outcome and get away scott free. </p>",
+    "moveType": "talent",
     "rollFormula": "",
     "moveResults": {
       "failure": {
@@ -44,9 +44,9 @@
     "coreVersion": "12.328",
     "systemId": "pbta",
     "systemVersion": "1.0.20",
-    "createdTime": 1725675417417,
-    "modifiedTime": 1725675455000,
+    "createdTime": 1725675128889,
+    "modifiedTime": 1725675396262,
     "lastModifiedBy": "FFGBnT7Qc5JYvJUu"
   },
-  "_key": "!items!LLHplTwLQsbJVa5F"
+  "_key": "!items!jbkNWdDWtOxC8Sag"
 }

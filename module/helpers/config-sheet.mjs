@@ -56,7 +56,7 @@ export const configSheet = async () => {
                     },
                 },
                 moveTypes: {
-                    talents: {
+                    talent: {
                         label: "Talents",
                         creation: true
                     }

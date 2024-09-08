@@ -5,7 +5,7 @@
   "img": "icons/svg/clockwork.svg",
   "system": {
     "description": "<p>You can do science to things; like reverse the polarity to overload the energy matrix or whatever.</p>",
-    "moveType": "",
+    "moveType": "talent",
     "rollFormula": "",
     "moveResults": {
       "failure": {

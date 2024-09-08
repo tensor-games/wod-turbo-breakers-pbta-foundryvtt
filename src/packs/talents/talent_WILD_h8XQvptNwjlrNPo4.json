@@ -5,7 +5,7 @@
   "img": "icons/svg/pawprint.svg",
   "system": {
     "description": "<p>You can commune with nature, track things by scent, speak to animals, do Elf type shit.</p>",
-    "moveType": "",
+    "moveType": "talent",
     "rollFormula": "",
     "moveResults": {
       "failure": {

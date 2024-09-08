@@ -1,11 +1,10 @@
 {
-  "name": "LUCKY",
+  "name": "ARCANE",
   "type": "move",
-  "_id": "jbkNWdDWtOxC8Sag",
-  "img": "icons/svg/card-joker.svg",
+  "img": "icons/svg/aura.svg",
   "system": {
-    "description": "<p>Once per expedition, avoid a bad outcome and get away scott free. </p>",
-    "moveType": "",
+    "description": "<div class=\"page\" title=\"Page 1\">\n<div class=\"layoutArea\">\n<div class=\"column\">\n<div class=\"page\" title=\"Page 7\">\n<div class=\"layoutArea\">\n<div class=\"column\">\n<p>You can attempt to control magical energy. This is very dangerous, but hey, magic powers.</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>",
+    "moveType": "talent",
     "rollFormula": "",
     "moveResults": {
       "failure": {
@@ -32,10 +31,9 @@
   },
   "effects": [],
   "folder": null,
-  "sort": 0,
   "ownership": {
     "default": 0,
-    "FFGBnT7Qc5JYvJUu": 3
+    "ZxkUcPIs5HSaJ2Mm": 3
   },
   "flags": {},
   "_stats": {
@@ -44,9 +42,11 @@
     "coreVersion": "12.328",
     "systemId": "pbta",
     "systemVersion": "1.0.20",
-    "createdTime": 1725675128889,
-    "modifiedTime": 1725675396262,
-    "lastModifiedBy": "FFGBnT7Qc5JYvJUu"
+    "createdTime": 1720224663873,
+    "modifiedTime": 1720224681397,
+    "lastModifiedBy": "ZxkUcPIs5HSaJ2Mm"
   },
-  "_key": "!items!jbkNWdDWtOxC8Sag"
+  "_id": "Bnbm0N7pEOf6gGkD",
+  "sort": 200000,
+  "_key": "!items!Bnbm0N7pEOf6gGkD"
 }

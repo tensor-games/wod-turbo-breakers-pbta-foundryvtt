@@ -1,11 +1,11 @@
 {
-  "name": "QUICK",
+  "name": "SHOOTER",
   "type": "move",
-  "_id": "hd77r4VDZoBUjRNm",
-  "img": "icons/svg/wingfoot.svg",
+  "_id": "lLotSGYyFAQgGtZK",
+  "img": "icons/svg/explosion.svg",
   "system": {
-    "description": "<p>You get +1 speed.</p>",
-    "moveType": "",
+    "description": "<p>You inflict +1d damage in ranged combat.</p>",
+    "moveType": "talent",
     "rollFormula": "",
     "moveResults": {
       "failure": {
@@ -44,9 +44,9 @@
     "coreVersion": "12.328",
     "systemId": "pbta",
     "systemVersion": "1.0.20",
-    "createdTime": 1725675512027,
-    "modifiedTime": 1725675603292,
+    "createdTime": 1725675614908,
+    "modifiedTime": 1725675643594,
     "lastModifiedBy": "FFGBnT7Qc5JYvJUu"
   },
-  "_key": "!items!hd77r4VDZoBUjRNm"
+  "_key": "!items!lLotSGYyFAQgGtZK"
 }
