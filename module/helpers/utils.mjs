@@ -8,5 +8,7 @@ export const preloadHandlebarsTemplates = async function () {
       'modules/wod-turbo-breakers-pbta-foundryvtt/templates/parts/actor-attributes.hbs',
       'modules/wod-turbo-breakers-pbta-foundryvtt/templates/parts/actor-movelist.hbs',
       'modules/wod-turbo-breakers-pbta-foundryvtt/templates/parts/actor-equipment.hbs',
+      'modules/wod-turbo-breakers-pbta-foundryvtt/templates/parts/actor-topbar.hbs',
     ]);
+
 };

@@ -49,16 +49,89 @@ export const configSheet = async () => {
                         playbook: true,
                     },
                     background: {
-                        position: "Left",
+                        position: "TopBar",
                         label: "Background",
                         type: "LongText",
+                        playbook: true,
+                    },
+                    experience: {
+                        position: "TopBar",
+                        label: "Experience",
+                        type: "Xp",
+                        max: 10,
+                        value: 0,
+                        playbook: true,
+                    },
+                    strain: {
+                        position: "TopBar",
+                        label: "Strain",
+                        type: "Xp",
+                        max: 5,
+                        value: 0,
+                        playbook: true,
+                    },
+                    levels: {
+                        position: "TopBar",
+                        label: "Levels",
+                        type: "ListMany",
+                        playbook: true,
+                        options: {
+                            0: {
+                                label: "",
+                                value: false,
+                                xpStart: 0,
+                                xpOffset: 0,
+                                strain: 1,
+                            },
+                            1: {
+                                label: "Colt",
+                                value: false,
+                                xpStart: 1,
+                                xpOffset: 1,
+                                strain: 2,
+                            },
+                            2: {
+                                label: "Pro",
+                                value: false,
+                                xpStart: 2,
+                                xpOffset: 2,
+                                strain: 3,
+                            },
+                            3: {
+                                label: "Ace",
+                                value: false,
+                                xpStart: 4,
+                                xpOffset: 3,
+                                strain: 4,
+                            },
+                            4: {
+                                label: "Veteran",
+                                value: false,
+                                xpStart: 7,
+                                xpOffset: 4,
+                                strain: 5,
+                            },
+                        }
+                    },
+                    armor: {
+                        position: "TopBar",
+                        label: "Armor",
+                        type: "Number",
+                        value: 0,
+                        playbook: true,
+                    },
+                    hitPoints: {
+                        position: "TopBar",
+                        label: "HP",
+                        type: "Number",
+                        value: 0,
                         playbook: true,
                     },
                 },
                 moveTypes: {
                     talent: {
                         label: "Talents",
-                        creation: true
+                        creation: false
                     }
                 },
                 equipmentTypes: {

@@ -29,18 +29,18 @@ $tab-background-active-color: #000000;
     }
 
     /* Inputs */
-    input, 
-    button, 
-    select, 
+    input,
+    button,
+    select,
     textarea {
         background: $input-background-color;
         color: $primary-text-color;
         border: 0.5px solid $input-border-color;
     }
 
-    input:disabled, 
-    button:disabled, 
-    select:disabled, 
+    input:disabled,
+    button:disabled,
+    select:disabled,
     textarea:disabled {
         background: $input-background-color;
         color: $disabled-text-color;
@@ -85,19 +85,19 @@ $tab-background-active-color: #000000;
     /* Labels */
     .sheet-attributes {
         position: relative;
-      
+
         .cell--stats .stat {
           background: $stat-background-color;
           color: $secondary-text-color;
-        
+
           .cell__title {
             color: $secondary-text-color;
           }
-    
+
           &:hover {
             background: $stat-background-hover-color;
           }
-    
+
           .stat-value {
             border: 1px solid $stat-border-color;
           }

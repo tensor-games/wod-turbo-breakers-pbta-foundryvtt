@@ -1,0 +1,45 @@
+{{#if (objLen attrs)}}
+    <div class="cell {{cssClass}} sheet-resources">
+        <div>
+            <div class="flexcol">
+                Experience
+            </div>
+            <div class="flexcol">
+                Strain
+            </div>
+        </div>
+
+        {{#each attrs.levels.options as |level key|}}
+            {{log "key"}}
+            {{log key}}
+            {{log "level"}}
+            {{log level}}
+        <div>
+            <div class="flexcol">
+                <div class="cell__clock flexrow">
+                    {{#each (calculateXpSlots key)}}
+                        <input type="radio" class="attr-xp" data-name="system.attributes.experience"
+                               data-step="{{this}}" {{checked (gt ../../system.attributes.experience.value this)}}>
+                        {{log "inner key"}}
+                        {{log key}}
+                    {{/each}}
+                    {{#if (eq key "0")}}&nbsp;{{/if}}
+                </div>
+            </div>
+            <div class="flexcol">
+                <div class="cell__clock flexrow">
+                    <input type="radio" class="attr-xp" data-name="system.attributes.strain"
+                           data-step="{{key}}" {{checked (gt ../system.attributes.strain.value key)}}>
+                </div>
+            </div>
+            <div class="flexcol">
+                <div class="cell__clock flexrow">
+                    {{level.label}}
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+
+    </div>
+{{/if}}

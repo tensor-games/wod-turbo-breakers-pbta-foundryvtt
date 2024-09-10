@@ -13,9 +13,18 @@
 					<img class="profile-img" src="{{actor.img}}" data-edit="img" height="100" width="100"/>
 				</div>
 
-				{{> "pbta.actor-stats" }}
+                <div>
+                    <div class="flexcol">
+                        {{> "pbta.actor-stats" }}
+                    </div>
 
-			</section>
+                    <!-- Top Bar (under Attributes) -->
+                    <div class="flexcol">
+                        {{~> "modules/wod-turbo-breakers-pbta-foundryvtt/templates/parts/actor-topbar.hbs" attrs=system.attrTopBar cssClass="cell--attributes-top flexrow" owner=owner editable=editable ~}}
+                    </div>
+                </div>
+
+            </section>
 			{{/if}}
 
 			<section class="sheet-attributes-top">
@@ -28,6 +37,8 @@
 			{{#if (objLen system.attrLeft)}}
 			<section class="sheet-look">
 				<div class="cell cell--aesthetics">
+                    {{log "boo"}}
+                    {{log system}}
 					{{> "pbta.actor-attributes" attrs=system.attrLeft cssClass="cell--attributes-left" owner=owner editable=editable}}
 				</div>
 			</section>

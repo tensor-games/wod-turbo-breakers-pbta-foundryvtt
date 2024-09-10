@@ -28,6 +28,19 @@ Hooks.once('init', () => {
 
     // Preload Handlebars stuff.
     utils.preloadHandlebarsTemplates();
+
+    Handlebars.registerHelper("calculateXpSlots", function(level) {
+        // HOORAY MATH
+        const leveln = Number(level)
+        const start = ((leveln ** 2)*0.5) - (leveln*0.5) +1
+        const end = start + leveln -1
+        const points = []
+        for (var i = start; i<= end; i++) {
+            points.push(i);
+        }
+        return points;
+    });
+
 })
 
 Hooks.once('pbtaSheetConfig', () => {
@@ -37,6 +50,18 @@ Hooks.once('pbtaSheetConfig', () => {
 
     // Replace the game.pbta.sheetConfig with wod-turbo-breakers-pbta-foundryvtt version.
     configSheet();
+
+    // PBTA Settings
+    game.settings.set('pbta', 'advForward', false);
+    game.settings.set('pbta', 'hideRollFormula', true);
+    game.settings.set('pbta', 'hideForward', true);
+    game.settings.set('pbta', 'hideOngoing', true);
+    game.settings.set('pbta', 'hideRollMode', true);
+    game.settings.set('pbta', 'hideUses', true);
+
+    if (isNewerVersion(game.system.version, '1.0.4')) {
+        game.settings.set('pbta', 'hideHold', true);
+    }
 
 });
 
