@@ -1,39 +1,52 @@
 {{#if (objLen attrs)}}
-    <div class="cell {{cssClass}} sheet-resources">
-        <div>
-            <div class="flexcol">
+    <div class="cell cell--attributes">
+
+        <div class="toprow-background-col">
+            <div class="flexrow xp-bar">
+                Background
+            </div>
+            <div class="flexrow strain-bar">
+                <div class="cell__attr-background">
+                    <div class="cell cell--background cell--attr-background cell--Text">
+                        <div class="editor"><a class="editor-edit"><i class="fa-solid fa-edit"></i></a>
+                            <div class="editor-content" data-engine="tinymce" data-collaborate="false"
+                                 data-edit="undefined"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flexrow label-bar">&nbsp;</div>
+        </div>
+
+
+        <div class="toprow-label-col">
+            <div class="flexrow xp-bar">
                 Experience
             </div>
-            <div class="flexcol">
+            <div class="flexrow strain-bar">
                 Strain
             </div>
+            <div class="flexrow label-bar">&nbsp;</div>
         </div>
 
         {{#each attrs.levels.options as |level key|}}
-        <div>
-            <div class="flexcol">
-                <div class="cell__clock flexrow">
+            <div class="toprow-level-{{key}}-col">
+                <div class="flexrow xp-bar">
                     {{#each (calculateXpSlots key)}}
                         <input type="radio" class="attr-xp" data-name="system.attributes.experience"
                                data-step="{{this}}" {{checked (gt ../../system.attributes.experience.value this)}}>
-                        {{log "inner key"}}
                         {{log key}}
                     {{/each}}
                     {{#if (eq key "0")}}&nbsp;{{/if}}
                 </div>
-            </div>
-            <div class="flexcol">
-                <div class="cell__clock flexrow">
+                <div class="flexrow strain-bar">
                     <input type="radio" class="attr-xp" data-name="system.attributes.strain"
                            data-step="{{key}}" {{checked (gt ../system.attributes.strain.value key)}}>
                 </div>
-            </div>
-            <div class="flexcol">
-                <div class="cell__clock flexrow">
+                <div class="flexrow label-bar">
                     {{level.label}}
                 </div>
             </div>
-        </div>
         {{/each}}
 
 

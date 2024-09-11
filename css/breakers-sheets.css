@@ -659,6 +659,54 @@
     font-size: 18px;
 }
 
+input .attr-xp {
+    margin: 0 0 !important;
+}
+div .xp-bar {
+    height: fit-content;
+    padding-bottom: 5px;
+}
+
+div .strain-bar {
+    height: fit-content;
+    padding-bottom: 5px;
+}
+
+div .label-bar {
+    height: fit-content;
+}
+
+div .toprow-background-col {
+    float: left;
+}
+
+div .toprow-label-col {
+    float: left;
+}
+
+div .toprow-level-0-col {
+    float: left;
+}
+
+div .toprow-level-1-col {
+    width: 3em;
+    float: left;
+}
+
+div .toprow-level-2-col {
+    width: 5em;
+    float: left;
+}
+
+div .toprow-level-3-col {
+    width: 7em;
+    float: left;
+}
+
+div .toprow-level-4-col {
+    width: 9em;
+    float: left;
+}
 
 /* simplifying the default sheet to look more like Breakers */
 div .cell--PBTA_OTHER {

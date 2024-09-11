@@ -51,7 +51,7 @@ export const configSheet = async () => {
                     background: {
                         position: "TopBar",
                         label: "Background",
-                        type: "LongText",
+                        type: "Text",
                         playbook: true,
                     },
                     experience: {
