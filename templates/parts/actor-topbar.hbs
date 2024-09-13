@@ -44,11 +44,11 @@
                         {{log key}}
                     {{/each}}
                 </div>
-                <div class="flexrow strain-bar">
+                <div class="flexrow strain-bar{{isLastLevel ../attrs.levels.options key}}">
                     <input type="radio" class="attr-xp" data-name="system.attributes.strain"
                            data-step="{{key}}" {{checked (gt ../system.attributes.strain.value key)}}>
                 </div>
-                <div class="flexrow label-bar">
+                <div class="flexrow label-bar{{isLastLevel ../attrs.levels.options key}}">
                     {{level.label}}
                 </div>
             </div>
@@ -58,10 +58,10 @@
             <div class="flexrow xp-bar-right">
                 HP
             </div>
-            <div class="flexrow strain-bar-right">
+            <div class="flexrow strain-bar-hp-armor">
                 &nbsp;
             </div>
-            <div class="flexrow label-bar-right">
+            <div class="flexrow label-bar-hp-armor">
                 Armor
             </div>
         </div>
