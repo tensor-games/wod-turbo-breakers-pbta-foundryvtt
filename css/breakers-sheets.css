@@ -659,53 +659,210 @@
     font-size: 18px;
 }
 
-input .attr-xp {
-    margin: 0 0 !important;
-}
+
 div .xp-bar {
-    height: fit-content;
-    padding-bottom: 5px;
+    height: 2em;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    display-direction: column;
+    align-items: center;
+    background-color: var(--breakers-interactive-bg-color);
+    color: var(--breakers-primary-text-color);
+    /*color: var(--breakers-input-text-color);*/
+    border-left: 1px solid var(--breakers-interactive-bg-hover-color);
+    border-right: 1px solid var(--breakers-interactive-bg-hover-color);
+}
+
+div .xp-bar-left {
+    height: 2em;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    display-direction: column;
+    align-items: center;
+    background-color: var(--breakers-interactive-bg-color);
+    color: var(--breakers-primary-text-color);
+    /*color: var(--breakers-input-text-color);*/
+    border-right: 1px solid var(--breakers-interactive-bg-hover-color);
+}
+
+div .xp-bar-right {
+    height: 2em;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    display-direction: column;
+    align-items: center;
+    background-color: var(--breakers-interactive-bg-color);
+    justify-content: left;
+    color: var(--breakers-primary-text-color);
+    /*color: var(--breakers-input-text-color);*/
+    border-left: 1px solid var(--breakers-interactive-bg-hover-color);
+}
+
+div .xp-bar input[type=radio] {
+    margin: 0 0 0 0 !important;
+    width: 1.25em !important;
+    height: 1.25em !important;
 }
 
 div .strain-bar {
-    height: fit-content;
-    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    color: var(--breakers-primary-text-color);
+    /*color: var(--breakers-input-text-color);*/
+    height: 4em;
+    display: flex;
+    display-direction: column;
+    align-items: center;
+    border: 1px solid var(--breakers-interactive-bg-color);
+}
+
+div .strain-bar-left {
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    color: var(--breakers-primary-text-color);
+    /*color: var(--breakers-input-text-color);*/
+    height: 4em;
+    display: flex;
+    display-direction: column;
+    align-items: center;
+    border-top: 1px solid var(--breakers-interactive-bg-color);
+    border-bottom: 1px solid var(--breakers-interactive-bg-color);
+    border-right: 1px solid var(--breakers-interactive-bg-color);
+}
+
+div .strain-bar-right {
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    color: var(--breakers-primary-text-color);
+    /*color: var(--breakers-input-text-color);*/
+    height: 4em;
+    display: flex;
+    display-direction: column;
+    align-items: flex-start;
+    border-top: 1px solid var(--breakers-interactive-bg-color);
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid var(--breakers-interactive-bg-color);
+}
+
+div .strain-bar input[type=radio] {
+    margin: 0 0 0 0 !important;
+    width: 1.25em !important;
+    height: 1.25em !important;
+}
+
+div .strain-bar-borderless {
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    color: var(--breakers-primary-text-color);
+    /*color: var(--breakers-input-text-color);*/
+    height: 4em;
+    display: flex;
+    display-direction: column;
+    align-items: center;
+}
+
+div .strain-bar-borderless input[type=radio] {
+    margin: 0 0 0 0 !important;
+    color: var(--breakers-primary-text-color);
+    /*color: var(--breakers-input-text-color);*/
+    width: 1.25em !important;
+    height: 1.25em !important;
 }
 
 div .label-bar {
-    height: fit-content;
+    height: 2em;
+    color: var(--breakers-primary-text-color);
+    /*color: var(--breakers-input-text-color);*/
+    border-top: 1px solid var(--breakers-interactive-bg-color);
+    border-left: 1px solid var(--breakers-interactive-bg-color);
+    border-right: 1px solid var(--breakers-interactive-bg-color);
+    display: flex;
+    display-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div .label-bar-left {
+    height: 2em;
+    color: var(--breakers-primary-text-color);
+    /*color: var(--breakers-input-text-color);*/
+    border-top: 1px solid var(--breakers-interactive-bg-color);
+    border-right: 1px solid var(--breakers-interactive-bg-color);
+    display: flex;
+    display-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div .label-bar-right {
+    padding-left: 5px;
+    height: 2em;
+    color: var(--breakers-primary-text-color);
+    /*color: var(--breakers-input-text-color);*/
+    border-top: 1px transparent;
+    border-left: 1px solid var(--breakers-interactive-bg-color);
+    display: flex;
+    display-direction: column;
+    align-items: center;
+    justify-content: left;
+}
+
+div .toprow-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    font-style: italic;
+    /*font-weight: bold;*/
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 0.05rem;
 }
 
 div .toprow-background-col {
-    float: left;
+    flex-grow: 3;
+    padding-left: 5px;
 }
 
 div .toprow-label-col {
-    float: left;
+    flex-grow: 1;
 }
 
 div .toprow-level-0-col {
-    float: left;
+    flex-grow: 1;
 }
 
 div .toprow-level-1-col {
-    width: 3em;
-    float: left;
+    flex-grow: 1;
+    /*flex-basis: 3em;*/
 }
 
 div .toprow-level-2-col {
-    width: 5em;
-    float: left;
+    flex-grow: 1;
+    /*flex-basis: 5em;*/
 }
 
 div .toprow-level-3-col {
-    width: 7em;
-    float: left;
+    flex-grow: 1;
+    /*flex-basis: 7em;*/
 }
 
 div .toprow-level-4-col {
-    width: 9em;
-    float: left;
+    flex-grow: 1;
+    /*flex-basis: 9em;*/
+}
+
+div .toprow-hp-armor-col {
+    flex-grow: 4;
 }
 
 /* simplifying the default sheet to look more like Breakers */

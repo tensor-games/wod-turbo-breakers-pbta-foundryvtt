@@ -1,11 +1,13 @@
 {{#if (objLen attrs)}}
     <div class="cell cell--attributes">
+        <div class="toprow-container">
+
 
         <div class="toprow-background-col">
-            <div class="flexrow xp-bar">
+            <div class="flexrow xp-bar-left">
                 Background
             </div>
-            <div class="flexrow strain-bar">
+            <div class="flexrow strain-bar-left">
                 <div class="cell__attr-background">
                     <div class="cell cell--background cell--attr-background cell--Text">
                         <div class="editor"><a class="editor-edit"><i class="fa-solid fa-edit"></i></a>
@@ -15,7 +17,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flexrow label-bar">&nbsp;</div>
+            <div class="flexrow label-bar-left">&nbsp;</div>
         </div>
 
 
@@ -25,6 +27,10 @@
             </div>
             <div class="flexrow strain-bar">
                 Strain
+                <div class="flexrow strain-bar-borderless">
+                    <input type="radio" class="attr-xp" data-name="system.attributes.strain"
+                           data-step="0"  {{checked (gt system.attributes.strain.value 0)}}>
+                </div>
             </div>
             <div class="flexrow label-bar">&nbsp;</div>
         </div>
@@ -37,7 +43,6 @@
                                data-step="{{this}}" {{checked (gt ../../system.attributes.experience.value this)}}>
                         {{log key}}
                     {{/each}}
-                    {{#if (eq key "0")}}&nbsp;{{/if}}
                 </div>
                 <div class="flexrow strain-bar">
                     <input type="radio" class="attr-xp" data-name="system.attributes.strain"
@@ -49,6 +54,18 @@
             </div>
         {{/each}}
 
+        <div class="toprow-hp-armor-col">
+            <div class="flexrow xp-bar-right">
+                HP
+            </div>
+            <div class="flexrow strain-bar-right">
+                &nbsp;
+            </div>
+            <div class="flexrow label-bar-right">
+                Armor
+            </div>
+        </div>
 
+        </div>
     </div>
 {{/if}}
