@@ -29,6 +29,9 @@
   --breakers-window-bg-position: bottom left;
   --breakers-influence-icon-color: invert(100%);
   --breakers-influence-icon-disabled-color: invert(100%) opacity(50%);
+
+    /*topbar variables*/
+  --breakers-topbar-hp-armor-left-padding: 10px;
 }
 
 .pbta.window-app .window-content {
@@ -687,6 +690,12 @@ div .xp-bar-left {
     border-right: 1px solid var(--breakers-interactive-bg-hover-color);
 }
 
+div .xp-bar input[type=radio] {
+    margin: 0 0 0 0 !important;
+    width: 1.25em !important;
+    height: 1.25em !important;
+}
+
 div .xp-bar-right {
     height: 2em;
     padding-left: 5px;
@@ -701,10 +710,24 @@ div .xp-bar-right {
     border-left: 1px solid var(--breakers-interactive-bg-hover-color);
 }
 
-div .xp-bar input[type=radio] {
+div .xp-bar-right input[type=radio] {
     margin: 0 0 0 0 !important;
     width: 1.25em !important;
     height: 1.25em !important;
+}
+
+div .xp-bar-hp-armor {
+    height: 2em;
+    padding-left: 5px;
+    padding-right: var(--breakers-topbar-hp-armor-left-padding);
+    display: flex;
+    display-direction: column;
+    align-items: center;
+    background-color: var(--breakers-interactive-bg-color);
+    justify-content: left;
+    color: var(--breakers-primary-text-color);
+    /*color: var(--breakers-input-text-color);*/
+    border-left: 1px solid transparent;
 }
 
 div .strain-bar {
@@ -720,6 +743,12 @@ div .strain-bar {
     border: 1px solid var(--breakers-interactive-bg-color);
 }
 
+div .strain-bar input[type=radio] {
+    margin: 0 0 0 0 !important;
+    width: 1.25em !important;
+    height: 1.25em !important;
+}
+
 div .strain-bar-left {
     padding-left: 5px;
     padding-right: 5px;
@@ -733,6 +762,10 @@ div .strain-bar-left {
     border-top: 1px solid var(--breakers-interactive-bg-color);
     border-bottom: 1px solid var(--breakers-interactive-bg-color);
     border-right: 1px solid var(--breakers-interactive-bg-color);
+}
+
+div .strain-bar-left input[type=text] {
+    text-align: left !important;
 }
 
 div .strain-bar-right {
@@ -752,23 +785,25 @@ div .strain-bar-right {
 
 div .strain-bar-hp-armor {
     padding-left: 5px;
-    padding-right: 5px;
+    padding-right: var(--breakers-topbar-hp-armor-left-padding);
     display: flex;
     color: var(--breakers-primary-text-color);
     /*color: var(--breakers-input-text-color);*/
     height: 4em;
     display: flex;
     display-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
     border-top: 1px solid var(--breakers-interactive-bg-color);
     border-bottom: 1px solid transparent;
     border-left: 1px solid transparent;
 }
 
-div .strain-bar input[type=radio] {
+div .strain-bar-hp-armor input[type=text] {
     margin: 0 0 0 0 !important;
-    width: 1.25em !important;
-    height: 1.25em !important;
+    max-width: 3em !important;
+    height: 3em !important;
+    border-color: transparent !important;
+    background-color: transparent;
 }
 
 div .strain-bar-borderless {
@@ -784,12 +819,36 @@ div .strain-bar-borderless {
     margin-top: -1px;
 }
 
+
+
 div .strain-bar-borderless input[type=radio] {
     margin: 0 0 0 0 !important;
     color: var(--breakers-primary-text-color);
     /*color: var(--breakers-input-text-color);*/
     width: 1.25em !important;
     height: 1.25em !important;
+}
+
+div .strain-row-triangle-container {
+    max-width: 3em;
+    height: 3em;
+    background-image: url("data:image/svg+xml,%3Csvg fill='%23FFFFFF' width='800px' height='800px' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24'%3E%3Cpath d='M21.9,19.3l-9-15.6c-0.1-0.1-0.2-0.2-0.3-0.3c-0.5-0.3-1.1-0.2-1.4,0.3l-9,15.6C2,19.4,2,19.6,2,19.8c0,0.6,0.4,1,1,1h18c0.2,0,0.3,0,0.5-0.1C22,20.4,22.1,19.8,21.9,19.3z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    grid-template-areas: "inner-div";
+}
+
+div .strain-row-triangle {
+    width: 2em;
+    height: 2em;
+    grid-area: inner-div;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5em;
 }
 
 div .label-bar {
@@ -799,10 +858,6 @@ div .label-bar {
     border-top: 1px solid var(--breakers-interactive-bg-color);
     border-left: 1px solid var(--breakers-interactive-bg-color);
     border-right: 1px solid var(--breakers-interactive-bg-color);
-    display: flex;
-    display-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 div .label-bar-left {
@@ -832,6 +887,7 @@ div .label-bar-right {
 
 div .label-bar-hp-armor {
     padding-left: 5px;
+    padding-right: var(--breakers-topbar-hp-armor-left-padding);
     height: 2em;
     color: var(--breakers-primary-text-color);
     /*color: var(--breakers-input-text-color);*/
@@ -872,7 +928,6 @@ div .toprow-level-0-col {
 
 div .toprow-level-1-col {
     flex-grow: 1;
-    /*flex-basis: 3em;*/
 }
 
 div .toprow-level-2-col {

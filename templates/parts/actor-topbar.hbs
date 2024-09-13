@@ -9,12 +9,8 @@
             </div>
             <div class="flexrow strain-bar-left">
                 <div class="cell__attr-background">
-                    <div class="cell cell--background cell--attr-background cell--Text">
-                        <div class="editor"><a class="editor-edit"><i class="fa-solid fa-edit"></i></a>
-                            <div class="editor-content" data-engine="tinymce" data-collaborate="false"
-                                 data-edit="undefined"></div>
-                        </div>
-                    </div>
+                    <input type="text" name="system.attributes.background.value"
+                           value="{{system.attributes.background.value}}" />
                 </div>
             </div>
             <div class="flexrow label-bar-left">&nbsp;</div>
@@ -37,7 +33,7 @@
 
         {{#each attrs.levels.options as |level key|}}
             <div class="toprow-level-{{key}}-col">
-                <div class="flexrow xp-bar">
+                <div class="flexrow xp-bar{{isLastLevel ../attrs.levels.options key}}">
                     {{#each (calculateXpSlots key)}}
                         <input type="radio" class="attr-xp" data-name="system.attributes.experience"
                                data-step="{{this}}" {{checked (gt ../../system.attributes.experience.value this)}}>
@@ -55,11 +51,16 @@
         {{/each}}
 
         <div class="toprow-hp-armor-col">
-            <div class="flexrow xp-bar-right">
+            <div class="flexrow xp-bar-hp-armor">
                 HP
             </div>
             <div class="flexrow strain-bar-hp-armor">
-                &nbsp;
+                <div class="strain-row-triangle-container">
+                    <div class="strain-row-triangle">
+                        <input type="text" name="system.attributes.armor.value"
+                               value="{{system.attributes.armor.value}}" data-dtype="Number"/>
+                    </div>
+                </div>
             </div>
             <div class="flexrow label-bar-hp-armor">
                 Armor
