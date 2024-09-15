@@ -37,7 +37,6 @@
                     {{#each (calculateXpSlots key)}}
                         <input type="radio" class="attr-xp" data-name="system.attributes.experience"
                                data-step="{{this}}" {{checked (gt ../../system.attributes.experience.value this)}}>
-                        {{log key}}
                     {{/each}}
                 </div>
                 <div class="flexrow strain-bar{{isLastLevel ../attrs.levels.options key}}">
@@ -53,12 +52,20 @@
         <div class="toprow-hp-armor-col">
             <div class="flexrow xp-bar-hp-armor">
                 HP
+                <div class="flexrow xp-bar-hp-armor">
+                    <div class="xp-row-triangle-container">
+                        <div class="xp-row-triangle">
+                            <input type="text" name="system.attributes.hitPoints.value"
+                                   value="{{system.attributes.hitPoints.value}}" maxlength="2" data-dtype="Number"/>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="flexrow strain-bar-hp-armor">
                 <div class="strain-row-triangle-container">
                     <div class="strain-row-triangle">
                         <input type="text" name="system.attributes.armor.value"
-                               value="{{system.attributes.armor.value}}" data-dtype="Number"/>
+                               value="{{system.attributes.armor.value}}" maxlength="1" data-dtype="Number"/>
                     </div>
                 </div>
             </div>

@@ -32,6 +32,7 @@
 
     /*topbar variables*/
   --breakers-topbar-hp-armor-left-padding: 10px;
+  --breakers-topbar-strainbar-height: 3em;
 }
 
 .pbta.window-app .window-content {
@@ -613,7 +614,7 @@
   border-bottom: none;
 }
 .pbta.sheet .editor-content .playbook h2, .pbta.sheet .editor-content .playbook h3 {
-  margin-top: 30px;
+  margin-top: 30p;
 }
 .pbta.sheet .editor-content .playbook .special {
   color: #ae0000;
@@ -718,6 +719,7 @@ div .xp-bar-right input[type=radio] {
 
 div .xp-bar-hp-armor {
     height: 2em;
+    min-width: 5em;
     padding-left: 5px;
     padding-right: var(--breakers-topbar-hp-armor-left-padding);
     display: flex;
@@ -730,13 +732,45 @@ div .xp-bar-hp-armor {
     border-left: 1px solid transparent;
 }
 
+div .xp-bar-hp-armor input[type=text] {
+    margin: -.75em 0 0 0 !important;
+    max-width: 3em !important;
+    height: 3em !important;
+    border-color: transparent !important;
+    background-color: transparent;
+    font-size: 24px !important;
+}
+
+div .xp-row-triangle-container {
+    max-width: 5em;
+    height: 5em;
+    background-image: url("data:image/svg+xml,%3Csvg fill='%23FFFFFF' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' height='800px' width='800px'%3E%3Cg xmlns='http://www.w3.org/2000/svg' transform='matrix(-1 0 0 -1 24 24)'%3E%3Cpath d='M21.9,19.3l-9-15.6c-0.1-0.1-0.2-0.2-0.3-0.3c-0.5-0.3-1.1-0.2-1.4,0.3l-9,15.6C2,19.4,2,19.6,2,19.8c0,0.6,0.4,1,1,1h18c0.2,0,0.3,0,0.5-0.1C22,20.4,22.1,19.8,21.9,19.3z' /%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    grid-template-areas: "inner-div";
+}
+
+div .xp-row-triangle {
+    width: 4em;
+    height: 2em;
+    grid-area: inner-div;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5em;
+    margin-left: -2px;
+}
+
 div .strain-bar {
     padding-left: 5px;
     padding-right: 5px;
     display: flex;
     color: var(--breakers-primary-text-color);
     /*color: var(--breakers-input-text-color);*/
-    height: 4em;
+    height: var(--breakers-topbar-strainbar-height);
     display: flex;
     display-direction: column;
     align-items: center;
@@ -755,7 +789,7 @@ div .strain-bar-left {
     display: flex;
     color: var(--breakers-primary-text-color);
     /*color: var(--breakers-input-text-color);*/
-    height: 4em;
+    height: var(--breakers-topbar-strainbar-height);
     display: flex;
     display-direction: column;
     align-items: center;
@@ -774,7 +808,7 @@ div .strain-bar-right {
     display: flex;
     color: var(--breakers-primary-text-color);
     /*color: var(--breakers-input-text-color);*/
-    height: 4em;
+    height: var(--breakers-topbar-strainbar-height);
     display: flex;
     display-direction: column;
     align-items: center;
@@ -789,7 +823,7 @@ div .strain-bar-hp-armor {
     display: flex;
     color: var(--breakers-primary-text-color);
     /*color: var(--breakers-input-text-color);*/
-    height: 4em;
+    height: var(--breakers-topbar-strainbar-height);
     display: flex;
     display-direction: column;
     align-items: flex-end;
@@ -812,13 +846,12 @@ div .strain-bar-borderless {
     display: flex;
     color: var(--breakers-primary-text-color);
     /*color: var(--breakers-input-text-color);*/
-    height: 4em;
+    height: var(--breakers-topbar-strainbar-height);
     display: flex;
     display-direction: column;
     align-items: center;
     margin-top: -1px;
 }
-
 
 
 div .strain-bar-borderless input[type=radio] {
@@ -839,6 +872,8 @@ div .strain-row-triangle-container {
     display: grid;
     place-items: center;
     grid-template-areas: "inner-div";
+    margin-bottom: -0.7em;
+    margin-left: 0.3em;
 }
 
 div .strain-row-triangle {
@@ -855,6 +890,10 @@ div .label-bar {
     height: 2em;
     color: var(--breakers-primary-text-color);
     /*color: var(--breakers-input-text-color);*/
+    display: flex;
+    display-direction: column;
+    align-items: center;
+    justify-content: center;
     border-top: 1px solid var(--breakers-interactive-bg-color);
     border-left: 1px solid var(--breakers-interactive-bg-color);
     border-right: 1px solid var(--breakers-interactive-bg-color);
@@ -947,6 +986,8 @@ div .toprow-level-4-col {
 
 div .toprow-hp-armor-col {
     flex-grow: 4;
+    flex-basis: 9em;
+    min-width: 8em;
 }
 
 /* simplifying the default sheet to look more like Breakers */

@@ -9,9 +9,9 @@
 			{{#if isCharacter}}
 			{{!-- Attributes --}}
 			<section class="sheet-attributes flexrow">
-				<div class="cell cell--image">
-					<img class="profile-img" src="{{actor.img}}" data-edit="img" height="100" width="100"/>
-				</div>
+<!--				<div class="cell cell--image">-->
+<!--					<img class="profile-img" src="{{actor.img}}" data-edit="img" height="100" width="100"/>-->
+<!--				</div>-->
 
                 <div>
                     <div class="flexcol">
@@ -34,15 +34,13 @@
 
 		<section class="sheet-bottom flexrow">
 			{{!-- Sidebar --}}
-			{{#if (objLen system.attrLeft)}}
-			<section class="sheet-look">
-				<div class="cell cell--aesthetics">
-                    {{log "boo"}}
-                    {{log system}}
-					{{> "pbta.actor-attributes" attrs=system.attrLeft cssClass="cell--attributes-left" owner=owner editable=editable}}
-				</div>
-			</section>
-			{{/if}}
+<!--			{{#if (objLen system.attrLeft)}}-->
+<!--			<section class="sheet-look">-->
+<!--				<div class="cell cell--aesthetics">-->
+<!--					{{> "pbta.actor-attributes" attrs=system.attrLeft cssClass="cell--attributes-left" owner=owner editable=editable}}-->
+<!--				</div>-->
+<!--			</section>-->
+<!--			{{/if}}-->
 
 			{{!-- Main --}}
 			<section class="sheet-main flexcol">
@@ -56,7 +54,7 @@
 				{{!-- Sheet Body --}}
 				<section class="sheet-body">
 					{{!-- Main Tab --}}
-					{{> "pbta.actor-description" }}
+                    {{> "modules/wod-turbo-breakers-pbta-foundryvtt/templates/parts/actor-description.hbs" }}
 
 					{{!-- Moves Tab --}}
 					{{> "modules/wod-turbo-breakers-pbta-foundryvtt/templates/parts/actor-movelist.hbs" }}

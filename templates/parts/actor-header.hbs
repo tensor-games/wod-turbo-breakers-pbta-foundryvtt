@@ -7,7 +7,8 @@
 	<div class="sheet-header__fields flexrow">
 		<input class="input--title" name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
 		{{#if (and isCharacter (not limited))}}
-		<input type="text" class="input input--title" name="system.attributes.realName.value" value="{{system.attributes.realName.value}}"  placeholder="{{actor.system.attributes.realName.label}}"/>
+		<input type="text" class="input input--title" name="system.attributes.look.value" value="{{system.attributes.look.value}}"  placeholder="Look"/>
+        <!--
 		<span class="sheet-playbook">
 			{{#if system.playbook.uuid}}
 			<span class="view-playbook" data-playbook="{{system.playbook.uuid}}" data-tooltip="{{localize 'PBTA.ViewPlaybook'}}" data-tooltip-direction="UP">
@@ -22,6 +23,7 @@
 			{{selectOptions playbooks selected=system.playbook.uuid valueAttr="uuid" labelAttr="name" blank=(localize "PBTA.Playbook") sort=true}}
 			</select>
 		</span>
+    	-->
 		{{/if}}
 	</div>
 </header>

@@ -44,7 +44,6 @@ Hooks.once('init', () => {
     Handlebars.registerHelper("isLastLevel", function(options, level) {
         const levelVals = Object.keys(options)
         const max = levelVals.reduce((max, c) => c > max ? c : max)
-        console.log([Number(max), level])
         if(Number(max) === Number(level)) {
             return "-right";
         }
