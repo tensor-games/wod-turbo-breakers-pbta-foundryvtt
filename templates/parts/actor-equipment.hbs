@@ -12,7 +12,13 @@
                                        data-step="{{@index}}"
                                     {{checked (gt item.value @index)}} >
                             {{/times}}
-                            {{item.label}}
+                            {{#if (eq item.type "defined")}}
+                                {{{item.label}}}
+                            {{else}}
+                                {{log key}}
+                                <input type="text" name="system.attributes.equipment.pack.{{key}}.label"
+                                       value="{{item.label}}" />
+                            {{/if}}
                         </div>
                         {{#if item.breakAfter}}
                 </div>
@@ -32,7 +38,13 @@
                                        data-step="{{@index}}"
                                     {{checked (gt item.value @index)}} >
                             {{/times}}
-                            {{item.label}}
+                            {{#if (eq item.type "defined")}}
+                                {{{item.label}}}
+                            {{else}}
+                                {{log key}}
+                                <input type="text" name="system.attributes.equipment.onHand.{{key}}.label"
+                                       value="{{item.label}}" />
+                            {{/if}}
                         </div>
                         {{#if item.breakAfter}}
                 </div>
