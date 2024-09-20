@@ -108,6 +108,167 @@ export const configSheet = async () => {
                         value: 0,
                         playbook: true,
                     },
+                    equipment: {
+                        playbook: true,
+                        position: "EquipTab",
+                        type: "ListMany",
+                        pack: {
+                            firstAid: {
+                                label: "First Aid",
+                                maxUses: 3,
+                                value: 0,
+                                subUses: 0,
+                                relWidth: 1,
+                                breakAfter: false,
+                            },
+                            supplies: {
+                                label: "Supplies",
+                                maxUses: 3,
+                                value: 0,
+                                subUses: 0,
+                                relWidth: 1,
+                                breakAfter: true,
+                            },
+                            repairKit: {
+                                label: "Repair Kit",
+                                maxUses: 1,
+                                value: 0,
+                                subUses: 0,
+                                relWidth: 2,
+                                breakAfter: false,
+                            },
+                            techKit: {
+                                label: "Tech Kit",
+                                maxUses: 1,
+                                value: 0,
+                                subUses: 0,
+                                relWidth: 2,
+                                breakAfter: false,
+                            },
+                            c4: {
+                                label: "C-4",
+                                maxUses: 1,
+                                value: 0,
+                                subUses: 0,
+                                relWidth: 1,
+                                breakAfter: true,
+                            },
+                            climbingGear: {
+                                label: "Climbing Gear",
+                                maxUses: 1,
+                                value: 0,
+                                subUses: 0,
+                                relWidth: 2,
+                                breakAfter: false,
+                            },
+                            heavyTools: {
+                                label: "Heavy Tools",
+                                maxUses: 1,
+                                value: 0,
+                                subUses: 0,
+                                relWidth: 2,
+                                breakAfter: true,
+                            },
+                            hazmatGear: {
+                                label: "HAZMAT Gear",
+                                maxUses: 1,
+                                value: 0,
+                                subUses: 0,
+                                relWidth: 2,
+                                breakAfter: false,
+                            },
+                            scubaGear: {
+                                label: "SCUBA Gear",
+                                maxUses: 1,
+                                value: 0,
+                                subUses: 0,
+                                relWidth: 2,
+                                breakAfter: false,
+                            }
+                        },
+                        onHand: {
+                            armor1: {
+                                label: "Armor",
+                                maxUses: 1,
+                                value: 0,
+                                subUses: 0,
+                                relWidth: 2,
+                                breakAfter: false,
+                            },
+                            armor2: {
+                                label: "Armor",
+                                maxUses: 1,
+                                value: 0,
+                                subUses: 0,
+                                relWidth: 2,
+                                breakAfter: false,
+                            },
+                            shield: {
+                                label: "Shield",
+                                maxUses: 1,
+                                value: 0,
+                                subUses: 0,
+                                relWidth: 1,
+                                breakAfter: true,
+                            },
+                            weapon1: {
+                                label: "Weapon",
+                                maxUses: 1,
+                                value: 0,
+                                subUses: 0,
+                                relWidth: 1,
+                                breakAfter: false,
+                            },
+                            weapon2: {
+                                label: "Weapon",
+                                maxUses: 1,
+                                value: 0,
+                                subUses: 0,
+                                relWidth: 2,
+                                breakAfter: true,
+                            },
+                            specialWeapon: {
+                                label: "Special Weapon",
+                                maxUses: 2,
+                                value: 0,
+                                subUses: 0,
+                                relWidth: 3,
+                                breakAfter: true,
+                            },
+                            grenades: {
+                                label: "Grenades",
+                                maxUses: 1,
+                                value: 0,
+                                subUses: 2,
+                                relWidth: 2,
+                                breakAfter: false,
+                            },
+                            flashBangs: {
+                                label: "Flashbangs",
+                                maxUses: 1,
+                                value: 0,
+                                subUses: 2,
+                                relWidth: 2,
+                                breakAfter: true,
+                            },
+                            nvgGaskMask: {
+                                label: "NVGs+ Gas Mask",
+                                maxUses: 1,
+                                value: 0,
+                                subUses: 0,
+                                relWidth: 2,
+                                breakAfter: false,
+                            },
+                            scanner: {
+                                label: "Scanner",
+                                maxUses: 1,
+                                value: 0,
+                                subUses: 0,
+                                relWidth: 2,
+                                breakAfter: false,
+                            }
+                        }
+                    }
                 },
                 moveTypes: {
                     talent: {
@@ -115,14 +276,6 @@ export const configSheet = async () => {
                         creation: false
                     }
                 },
-                equipmentTypes: {
-                    gear: {
-                        label: "Gear",
-                    },
-                    contraband: {
-                        label: "Contraband",
-                    }
-                }
             },
             npc: {
                 attributes: {
@@ -151,14 +304,6 @@ export const configSheet = async () => {
                         moves: []
                     }
                 },
-                equipmentTypes: {
-                    gear: {
-                        label: "Gear",
-                    },
-                    contraband: {
-                        label: "Contraband",
-                    }
-                }
             }
         }
     }
