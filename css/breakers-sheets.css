@@ -719,9 +719,9 @@ div .xp-bar-right input[type=radio] {
 
 div .xp-bar-hp-armor {
     height: 2em;
-    min-width: 5em;
+    /*min-width: 5em;*/
     padding-left: 5px;
-    padding-right: var(--breakers-topbar-hp-armor-left-padding);
+    /*padding-right: var(--breakers-topbar-hp-armor-left-padding);*/
     display: flex;
     display-direction: column;
     align-items: center;
@@ -985,9 +985,9 @@ div .toprow-level-4-col {
 }
 
 div .toprow-hp-armor-col {
-    flex-grow: 4;
-    flex-basis: 9em;
-    min-width: 8em;
+    flex-grow: 1;
+    /*flex-basis: 9em;*/
+    /*min-width: 8em;*/
 }
 
 /* simplifying the default sheet to look more like Breakers */
@@ -1019,6 +1019,11 @@ div .equipmentTab-onHand-row {
     display: flex;
 }
 
+div .equipmentTab-item-loot {
+    justify-content: space-around;
+    padding-top: 5px;
+}
+
 div .equipmentTab-item {
     display: flex;
     /*flex-direction: row;*/
@@ -1042,4 +1047,63 @@ div .rel-width-3 {
     flex-basis: 30em;
     min-width: 10em;
     max-width: 25em;
+}
+
+
+div .load-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    font-style: italic;
+    /*font-weight: bold;*/
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 0.05rem;
+}
+
+div .load-bar-left {
+    color: var(--breakers-primary-text-color);
+    border-top: 1px solid var(--breakers-interactive-bg-color);
+    border-right: 1px solid var(--breakers-interactive-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+div .load-bar {
+    color: var(--breakers-primary-text-color);
+    border-top: 1px solid var(--breakers-interactive-bg-color);
+    border-right: 1px solid var(--breakers-interactive-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div .load-bar-right {
+    color: var(--breakers-primary-text-color);
+    border-top: 1px solid var(--breakers-interactive-bg-color);
+    border-right: 1px solid var(--breakers-interactive-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div .load-cell {
+    height: 2em;
+    line-height: 2em;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+div .speed-cell {
+    height: 2.5em;
+    line-height: 2.5em;
+    margin-left: 5px;
+    margin-right: 5px;
 }

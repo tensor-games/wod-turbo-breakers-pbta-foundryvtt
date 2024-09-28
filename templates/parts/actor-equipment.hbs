@@ -1,59 +1,89 @@
 <div class="tab equipment" data-group="primary" data-tab="equipment">
     <section class="sheet-tab">
-        {{log system}}
         <div class="equipmentTab-container">
             <div class="equipmentTab-column">
-                <div class="equipmentTab-pack-row">
-                    {{#each system.attrEquipTab.equipment.pack as |item key|}}
-                        <div class="equipmentTab-item rel-width-{{item.relWidth}}">
-                            {{#times item.maxUses }}
-                                <input type="checkbox" class="attr-clock"
-                                       data-name="system.attributes.equipment.pack.{{key}}"
-                                       data-step="{{@index}}"
-                                    {{checked (gt item.value @index)}} >
-                            {{/times}}
-                            {{#if (eq item.type "defined")}}
-                                {{{item.label}}}
-                            {{else}}
-                                {{log key}}
-                                <input type="text" name="system.attributes.equipment.pack.{{key}}.label"
-                                       value="{{item.label}}" />
-                            {{/if}}
-                        </div>
-                        {{#if item.breakAfter}}
-                </div>
-                <div class="equipmentTab-pack-row">
+            <div class="equipmentTab-pack-row">
+                {{#each system.attrEquipTab.equipment.pack as |item key|}}
+                    <div class="equipmentTab-item rel-width-{{item.relWidth}}
+                        {{#if (eq key "loot")}} equipmentTab-item-loot{{/if}}">
+                        {{#times item.maxUses }}
+                            <input type="checkbox" class="attr-clock"
+                                   data-name="system.attributes.equipment.pack.{{key}}"
+                                   data-step="{{@index}}"
+                                {{checked (gt item.value @index)}} >
+                        {{/times}}
+                        {{#if (eq item.type "defined")}}
+                            {{{item.label}}}
+                        {{else}}
+                            <input type="text" name="system.attributes.equipment.pack.{{key}}.label"
+                                   value="{{item.label}}"/>
                         {{/if}}
-                    {{/each}}
-                </div>
+                    </div>
+                    {{#if item.breakAfter}}
+                    </div>
+                    <div class="equipmentTab-pack-row">
+                    {{/if}}
+                {{/each}}
+            </div>
             </div>
 
             <div class="equipmentTab-column">
-                <div class="equipmentTab-onHand-row">
-                    {{#each system.attrEquipTab.equipment.onHand as |item key|}}
-                        <div class="equipmentTab-item rel-width-{{item.relWidth}}">
-                            {{#times item.maxUses }}
-                                <input type="checkbox" class="attr-clock"
-                                       data-name="system.attributes.equipment.onHand.{{key}}"
-                                       data-step="{{@index}}"
-                                    {{checked (gt item.value @index)}} >
-                            {{/times}}
-                            {{#if (eq item.type "defined")}}
-                                {{{item.label}}}
-                            {{else}}
-                                {{log key}}
-                                <input type="text" name="system.attributes.equipment.onHand.{{key}}.label"
-                                       value="{{item.label}}" />
-                            {{/if}}
-                        </div>
-                        {{#if item.breakAfter}}
-                </div>
-                <div class="equipmentTab-onHand-row">
+            <div class="equipmentTab-onHand-row">
+                {{#each system.attrEquipTab.equipment.onHand as |item key|}}
+                {{log key}}
+                    <div class="equipmentTab-item rel-width-{{item.relWidth}}">
+                        {{#times item.maxUses }}
+                            <input type="checkbox" class="attr-clock"
+                                   data-name="system.attributes.equipment.onHand.{{key}}"
+                                   data-step="{{@index}}"
+                                {{checked (gt item.value @index)}} >
+                        {{/times}}
+                        {{#if (eq item.type "defined")}}
+                            {{{item.label}}}
+                        {{else}}
+                            <input type="text" name="system.attributes.equipment.onHand.{{key}}.label"
+                                   value="{{item.label}}"/>
                         {{/if}}
-                    {{/each}}
-                </div>
+                    </div>
+                    {{#if item.breakAfter}}
+            </div>
+            <div class="equipmentTab-onHand-row">
+                    {{/if}}
+                    {{#if (eq key "specialWeapon")}}
+            </div>
+            <div class="equipmentTab-onHand-row">
+
+            </div>
+            <div class="equipmentTab-onHand-row">
+                    {{/if}}
+                {{/each}}
+            </div>
             </div>
 
+        </div>
+        <div class="load-container">
+            <div class="load-bar-left">
+                <div class="load-cell">
+                    Load Limit
+                </div>
+                <div class="speed-cell">
+                    Speed
+                </div>
+            </div>
+            {{#each system.attrEquipTab.load.options as |item key|}}
+                <div class="load-bar{{#if (eq key 3)}}-right{{/if}}">
+                    <div class="load-cell">
+                        (P):{{{item.packLimit}}} (H):{{{item.handLimit}}}
+                    </div>
+                    <div class="speed-cell">
+                        <input type="checkbox" class="attr-clock"
+                               data-name="system.attributes.load.options.{{key}}"
+                               data-step="{{0}}"
+                            {{checked (gt item.value 0)}} >
+                        {{{item.label}}}
+                    </div>
+                </div>
+            {{/each}}
         </div>
     </section>
 </div>

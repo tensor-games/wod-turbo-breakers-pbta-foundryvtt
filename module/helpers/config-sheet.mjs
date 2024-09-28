@@ -404,7 +404,38 @@ export const configSheet = async () => {
                                 breakAfter: true,
                             },
                         }
-                    }
+                    },
+                    load: {
+                        playbook: true,
+                        position: "EquipTab",
+                        type: "ListMany",
+                        options: {
+                            speed1: {
+                                label: "Very Fast",
+                                packLimit: 2,
+                                handLimit: 1,
+                                value: 0,
+                            },
+                            speed2: {
+                                label: "Fast",
+                                packLimit: 3,
+                                handLimit: 2,
+                                value: 0,
+                            },
+                            speed3: {
+                                label: "Normal",
+                                packLimit: 5,
+                                handLimit: 3,
+                                value: 0,
+                            },
+                            speed4: {
+                                label: "Slow",
+                                packLimit: 8,
+                                handLimit: 5,
+                                value: 0,
+                            },
+                        }
+                    },
                 },
                 moveTypes: {
                     talent: {
