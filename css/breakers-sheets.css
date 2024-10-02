@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+@font-face {
+    font-family: 'Molot';
+    src: url("../assets/fonts/Molot.woff2") format("woff");
+}
+
 :root {
   --actor-gradient: linear-gradient(
     to bottom,
@@ -24,8 +31,7 @@
   --breakers-stats-border-color: rgb(229 222 210 / 37%);
   --breakers-cell-title-border-color: #173f6e;
   --breakers-header-bg-color: #173f6e;
-  --breakers-window-bg-image: url("/modules/breakers-newgeneration-unofficial/images/skyline.webp"),
-    var(--actor-gradient);
+  --breakers-window-bg-image: var(--actor-gradient);
   --breakers-window-bg-position: bottom left;
   --breakers-influence-icon-color: invert(100%);
   --breakers-influence-icon-disabled-color: invert(100%) opacity(50%);
@@ -95,17 +101,6 @@
 .pbta.sheet .cell--advancements,
 .pbta.sheet .cell--later-advances {
   margin-top: 10px;
-}
-.pbta.sheet .cell--momentOfTruth label div.moment-unlock {
-  font-style: italic;
-  text-transform: capitalize;
-  font-size: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 .pbta.sheet .sheet-header, .pbta.sheet .sheet-body {
   padding-left: 10px;
@@ -359,7 +354,19 @@
   background: var(--breakers-interactive-bg-color);
   color: var(--breakers-primary-text-color);
 }
+
+.pbta.sheet .sheet-attributes .cell--stats .stat .stat-icon {
+    color: #fff;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+}
+
 .pbta.sheet .sheet-attributes .cell--stats .stat .cell__title {
+  font-family: 'Molot';
+  font-weight: 200;
+  font-size: 32px;
+  font-style: normal;
   color: var(--breakers-primary-text-color);
 }
 .pbta.sheet .sheet-attributes .cell--stats .stat:hover {
@@ -444,7 +451,10 @@
 .pbta.sheet .sheet-tabs.tabs > a.item {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  font-style: italic;
+  font-family: 'Molot';
+  font-weight: 200;
+  font-size: 24px;
+  font-style: normal;
   background-color: var(--breakers-interactive-bg-color);
   color: var(--breakers-primary-text-color);
 }
@@ -998,7 +1008,6 @@ div .cell--PBTA_OTHER {
 /* equipment tab styles  */
 div .equipmentTab-container {
     display: flex;
-    font-style: italic;
     color: var(--breakers-primary-text-color);
     /*text-transform: uppercase;*/
     position: relative;
@@ -1028,7 +1037,10 @@ div .equipmentTab-item {
     display: flex;
     /*flex-direction: row;*/
     margin-left: 10px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 div .rel-width-1 {
@@ -1057,7 +1069,6 @@ div .load-container {
     justify-content: center;
     align-items: center;
     gap: 0;
-    font-style: italic;
     /*font-weight: bold;*/
     text-transform: uppercase;
     position: relative;
@@ -1099,6 +1110,9 @@ div .load-cell {
     line-height: 2em;
     margin-left: 5px;
     margin-right: 5px;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 div .speed-cell {
@@ -1106,4 +1120,8 @@ div .speed-cell {
     line-height: 2.5em;
     margin-left: 5px;
     margin-right: 5px;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
+
