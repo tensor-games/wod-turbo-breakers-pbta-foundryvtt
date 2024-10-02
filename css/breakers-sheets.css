@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Molot';
-    src: url("../assets/fonts/Molot.woff2") format("woff");
+    src: url("../assets/fonts/Molot.woff2") format("woff2");
 }
 
 :root {
@@ -955,7 +955,9 @@ div .toprow-container {
     justify-content: center;
     align-items: center;
     gap: 0;
-    font-style: italic;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    font-style: normal;
     /*font-weight: bold;*/
     text-transform: uppercase;
     position: relative;
