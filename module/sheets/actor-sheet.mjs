@@ -2,8 +2,8 @@ export function BreakersActorSheetMixin(Base) {
 	return class BreakersActorSheet extends Base {
 
         static get defaultOptions() {
-            console.log("default options");
-            console.log(super.defaultOptions);
+            // console.log("default options");
+            // console.log(super.defaultOptions);
             return mergeObject(super.defaultOptions, {
                 width: 850,
                 height: 1000,

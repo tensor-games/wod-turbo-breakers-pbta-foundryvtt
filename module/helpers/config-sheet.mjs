@@ -137,7 +137,7 @@ export const configSheet = async () => {
                                 maxUses: 1,
                                 value: 0,
                                 subUses: 0,
-                                relWidth: 2,
+                                relWidth: 1,
                                 breakAfter: false,
                             },
                             techKit: {
@@ -146,7 +146,7 @@ export const configSheet = async () => {
                                 maxUses: 1,
                                 value: 0,
                                 subUses: 0,
-                                relWidth: 2,
+                                relWidth: 1,
                                 breakAfter: false,
                             },
                             c4: {
@@ -274,7 +274,7 @@ export const configSheet = async () => {
                                 maxUses: 1,
                                 value: 0,
                                 subUses: 0,
-                                relWidth: 2,
+                                relWidth: 1,
                                 breakAfter: false,
                             },
                             armor2: {
@@ -283,7 +283,7 @@ export const configSheet = async () => {
                                 maxUses: 1,
                                 value: 0,
                                 subUses: 0,
-                                relWidth: 2,
+                                relWidth: 1,
                                 breakAfter: false,
                             },
                             shield: {
@@ -292,7 +292,7 @@ export const configSheet = async () => {
                                 maxUses: 1,
                                 value: 0,
                                 subUses: 0,
-                                relWidth: 2,
+                                relWidth: 1,
                                 breakAfter: true,
                             },
                             weapon1: {
@@ -301,7 +301,7 @@ export const configSheet = async () => {
                                 maxUses: 1,
                                 value: 0,
                                 subUses: 0,
-                                relWidth: 2,
+                                relWidth: 1,
                                 breakAfter: false,
                             },
                             weapon2: {
@@ -310,7 +310,7 @@ export const configSheet = async () => {
                                 maxUses: 1,
                                 value: 0,
                                 subUses: 0,
-                                relWidth: 2,
+                                relWidth: 1,
                                 breakAfter: false,
                             },
                             spacer: {
@@ -319,7 +319,7 @@ export const configSheet = async () => {
                                 maxUses: 0,
                                 value: 0,
                                 subUses: 0,
-                                relWidth: 2,
+                                relWidth: 1,
                                 breakAfter: true,
                             },
                             specialWeapon: {

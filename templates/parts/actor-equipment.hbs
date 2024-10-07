@@ -1,6 +1,21 @@
 <div class="tab equipment" data-group="primary" data-tab="equipment">
     <section class="sheet-tab">
         <div class="equipmentTab-container">
+            <div class="equipmentTab-talent-column rel-width-1">
+                {{#each moves as |moveGroup moveKey|}}
+                    <div class="cell cell--moves cell--group cell--{{moveKey}}" data-key="{{moveKey}}">
+                        <ol class="items-list">
+                            {{#each moveGroup as |item id|}}
+                                <li class="item flexrow" data-item-id="{{item._id}}" draggable="true">
+                                    {{> "pbta.actor-moves" item=item statSettings=../../statSettings sheetSettings=../../sheetSettings}}
+                                </li>
+                            {{/each}}
+                        </ol>
+                    </div>
+                {{/each}}
+                <div class="equipmentTab-talent-column-bg"> </div>
+            </div>
+
             <div class="equipmentTab-column">
             <div class="equipmentTab-pack-row">
                 {{#each system.attrEquipTab.equipment.pack as |item key|}}
@@ -20,8 +35,8 @@
                         {{/if}}
                     </div>
                     {{#if item.breakAfter}}
-                    </div>
-                    <div class="equipmentTab-pack-row">
+            </div>
+            <div class="equipmentTab-pack-row">
                     {{/if}}
                 {{/each}}
             </div>
@@ -30,7 +45,6 @@
             <div class="equipmentTab-column">
             <div class="equipmentTab-onHand-row">
                 {{#each system.attrEquipTab.equipment.onHand as |item key|}}
-                {{log key}}
                     <div class="equipmentTab-item rel-width-{{item.relWidth}}">
                         {{#times item.maxUses }}
                             <input type="checkbox" class="attr-clock"
