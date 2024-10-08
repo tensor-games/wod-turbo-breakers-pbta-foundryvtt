@@ -1030,6 +1030,7 @@ div .equipmentTab-talent-column {
     pointer-events: auto;
     font-family: "Titillium Web", sans-serif;
 }
+
 div .equipmentTab-talent-column-bg {
     width: 100%;
     height: 100%;
@@ -1040,6 +1041,15 @@ div .equipmentTab-talent-column-bg {
     pointer-events: none;
     opacity: 0.3;
     mask-size: cover;
+}
+
+div .equipmentTab-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+    pointer-events: auto;
+    font-family: "Titillium Web", sans-serif;
 }
 
 div .equipmentTab-pack-row {
