@@ -8,21 +8,21 @@
 :root {
   --actor-gradient: linear-gradient(
     to bottom,
-    #657f98 0%,
-    #334d66 80%,
-    #0d2740 100%
+    #798a9b 0%,
+    #363e49 80%,
+    #20252c 100%
   );
-  --breakers-primary-text-color: #ffffff;
+  --breakers-primary-text-color: #e9ecf1;
   --breakers-secondary-text-color: #000000;
-  --breakers-title-text-color: #173f6e;
+  --breakers-title-text-color: #3e72a3;
   --breakers-input-text-color: #000000;
-  --breakers-input-placeholder-color: #979797;
-  --breakers-input-disabled-color: #0e2949;
+  --breakers-input-placeholder-color: #798a9b;
+  --breakers-input-disabled-color: #3e72a3;
   --breakers-interactive-bg-color: #1e528f;
   --breakers-interactive-bg-hover-color: #173f6e;
   --breakers-option-bg-color: #683b47;
-  --breakers-tabs-border-color: #ffeb98;
-  --breakers-tab-bg-active-color: #ffeb98;
+  --breakers-tabs-border-color: #bc1ca;
+  --breakers-tab-bg-active-color: #fbea96;
   --breakers-input-bg-color: rgb(255 255 255 / 75%);
   --breakers-input-border-color: rgb(0 0 0 / 75%);
   --breakers-tox-edit-area-bg-color: rgba(255, 255, 255, 0.5);

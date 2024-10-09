@@ -1,4 +1,4 @@
-import { configSheet } from "./helpers/config-sheet.mjs"
+import {configSheet} from "./helpers/config-sheet.mjs"
 import * as utils from "./helpers/utils.mjs";
 import {BreakersActorSheetMixin} from "./sheets/actor-sheet.mjs";
 
@@ -49,6 +49,15 @@ Hooks.once('init', () => {
         }
         return "";
     });
+
+    Handlebars.registerHelper("setTalents", async function (system) {
+        return await game.packs.get("wod-turbo-breakers-pbta-foundryvtt.talents").getDocuments({type: "move"}).then((data) => {
+            system['talents'] = data;
+            // console.log("DERP")
+            // console.log(data);
+            return data;
+        });
+    });
 })
 
 Hooks.once('pbtaSheetConfig', () => {
@@ -70,6 +79,8 @@ Hooks.once('pbtaSheetConfig', () => {
     if (isNewerVersion(game.system.version, '1.0.4')) {
         game.settings.set('pbta', 'hideHold', true);
     }
+
+    console.log("DERP DERP")
 
 });
 
