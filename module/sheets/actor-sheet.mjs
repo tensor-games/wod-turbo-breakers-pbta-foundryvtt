@@ -6,7 +6,7 @@ export function BreakersActorSheetMixin(Base) {
             // console.log(super.defaultOptions);
             return mergeObject(super.defaultOptions, {
                 width: 850,
-                height: 1000,
+                height: 900,
             });
         }
 
