@@ -1102,12 +1102,11 @@ div .load-container {
     align-items: center;
     flex-wrap: nowrap;
     justify-content: center;
-    align-items: center;
     gap: 0;
-    /*font-weight: bold;*/
     text-transform: uppercase;
     position: relative;
     letter-spacing: 0.05rem;
+    width: 100%;
 }
 
 div .load-bar-left {
