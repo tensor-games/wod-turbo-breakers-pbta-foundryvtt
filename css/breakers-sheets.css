@@ -894,16 +894,16 @@ div .strain-row-triangle {
     margin-top: 0.5em;
 }
 
-div .label-bar {
+div .label-bar-left-extension {
     height: 2em;
     color: var(--breakers-primary-text-color);
-    display: flex;
-    display-direction: column;
+    border-top: 1px solid var(--breakers-interactive-bg-color);
+    /*border-right: 1px solid var(--breakers-interactive-bg-color);*/
+    /*display: flex;*/
+    /*display-direction: column;*/
     align-items: center;
     justify-content: center;
-    border-top: 1px solid var(--breakers-interactive-bg-color);
-    border-left: 1px solid var(--breakers-interactive-bg-color);
-    border-right: 1px solid var(--breakers-interactive-bg-color);
+    width: 145%;
 }
 
 div .label-bar-left {
@@ -911,10 +911,22 @@ div .label-bar-left {
     color: var(--breakers-primary-text-color);
     border-top: 1px solid var(--breakers-interactive-bg-color);
     border-right: 1px solid var(--breakers-interactive-bg-color);
-    display: flex;
-    display-direction: column;
+    /*display: flex;*/
+    /*display-direction: column;*/
     align-items: center;
     justify-content: center;
+}
+
+div .label-bar {
+    height: 2em;
+    color: var(--breakers-primary-text-color);
+    /*display: flex;*/
+    /*display-direction: column;*/
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--breakers-interactive-bg-color);
+    border-left: 1px solid var(--breakers-interactive-bg-color);
+    border-right: 1px solid var(--breakers-interactive-bg-color);
 }
 
 div .label-bar-right {
@@ -923,8 +935,8 @@ div .label-bar-right {
     color: var(--breakers-primary-text-color);
     border-top: 1px solid var(--breakers-interactive-bg-color);
     border-left: 1px solid var(--breakers-interactive-bg-color);
-    display: flex;
-    display-direction: column;
+    /*display: flex;*/
+    /*display-direction: column;*/
     align-items: center;
     justify-content: center;
 }
@@ -936,8 +948,8 @@ div .label-bar-hp-armor {
     color: var(--breakers-primary-text-color);
     border-top: 1px solid transparent;
     border-left: 1px solid transparent;
-    display: flex;
-    display-direction: column;
+    /*display: flex;*/
+    /*display-direction: column;*/
     align-items: center;
     justify-content: left;
 }

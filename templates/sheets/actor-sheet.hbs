@@ -9,9 +9,6 @@
 			{{#if isCharacter}}
 			{{!-- Attributes --}}
 			<section class="sheet-attributes flexrow">
-<!--				<div class="cell cell--image">-->
-<!--					<img class="profile-img" src="{{actor.img}}" data-edit="img" height="100" width="100"/>-->
-<!--				</div>-->
 
                 <div>
                     <div class="flexcol">
@@ -33,33 +30,21 @@
 		</section>
 
 		<section class="sheet-bottom flexrow">
-			{{!-- Sidebar --}}
-<!--			{{#if (objLen system.attrLeft)}}-->
-<!--			<section class="sheet-look">-->
-<!--				<div class="cell cell--aesthetics">-->
-<!--					{{> "pbta.actor-attributes" attrs=system.attrLeft cssClass="cell--attributes-left" owner=owner editable=editable}}-->
-<!--				</div>-->
-<!--			</section>-->
-<!--			{{/if}}-->
 
 			{{!-- Main --}}
 			<section class="sheet-main flexcol">
 				{{!-- Sheet Tab Navigation --}}
 				<nav class="sheet-tabs tabs" data-group="primary">
-					<a class="item" data-tab="description">{{localize "PBTA.Description"}}</a>
-					<a class="item" data-tab="moves">{{localize "BREAKERS-SHEETS.SheetConfig.tabs.talents"}}</a>
                     <a class="item" data-tab="equipment">{{localize "BREAKERS-SHEETS.SheetConfig.tabs.equipment"}}</a>
+                    <a class="item" data-tab="description">{{localize "PBTA.Description"}}</a>
 				</nav>
 
 				{{!-- Sheet Body --}}
 				<section class="sheet-body">
-					{{!-- Main Tab --}}
+                    {{!-- Equipment Tab --}}
                     {{> "modules/wod-turbo-breakers-pbta-foundryvtt/templates/parts/actor-description.hbs" }}
 
-					{{!-- Moves Tab --}}
-					{{> "modules/wod-turbo-breakers-pbta-foundryvtt/templates/parts/actor-movelist.hbs" }}
-
-                    {{!-- Equipment Tab --}}
+                    {{!-- Description Tab --}}
 					{{> "modules/wod-turbo-breakers-pbta-foundryvtt/templates/parts/actor-equipment.hbs" }}
 				</section>
 			</section>
