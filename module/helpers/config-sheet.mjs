@@ -52,7 +52,35 @@ export const configSheet = async () => {
                         position: "TopBar",
                         label: "Background",
                         type: "Text",
+                        playbook: true
+                    },
+                    backgroundType: {
+                        position: "TopBar",
+                        type: "Text",
                         playbook: true,
+                        value: "",
+                        options: {
+                            1: {
+                                label: "Civilian",
+                                name: "civilian",
+                            },
+                            2: {
+                                label: "Criminal",
+                                name: "criminal",
+                            },
+                            3: {
+                                label: "Military",
+                                name: "military",
+                            },
+                            4: {
+                                label: "Science",
+                                name: "science",
+                            },
+                            5: {
+                                label: "Weird",
+                                name: "weird",
+                            },
+                        }
                     },
                     experience: {
                         position: "TopBar",

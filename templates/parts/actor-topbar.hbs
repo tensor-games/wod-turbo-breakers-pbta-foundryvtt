@@ -3,33 +3,49 @@
         <div class="toprow-container">
 
 
-        <div class="toprow-background-col">
+        <div class="toprow-level-0-col">
             <div class="flexrow xp-bar-left">
-                Background
+                <div class="flexrow xp-bar-left-background-extension">
+                    Background
+                </div>
+                <div class="flexrow xp-bar-left-experience-extension">
+                    Experience
+                </div>
             </div>
+
             <div class="flexrow strain-bar-left">
-                <div class="cell__attr-background">
+                <div class="flexrow strain-bar-left-background-extension">
                     <input type="text" name="system.attributes.background.value"
                            value="{{system.attributes.background.value}}" />
                 </div>
-            </div>
-            <div class="flexrow label-bar-left-extension">&nbsp;</div>
-        </div>
-
-
-        <div class="toprow-label-col">
-            <div class="flexrow xp-bar">
-                Experience
-            </div>
-            <div class="flexrow strain-bar">
-                Strain
-                <div class="flexrow strain-bar-borderless">
-                    <input type="radio" class="attr-xp" data-name="system.attributes.strain"
-                           data-step="0"  {{checked (gt system.attributes.strain.value 0)}}>
+                <div class="flexrow strain-bar-left-experience-extension">
+                        Strain
+                        <input type="radio" class="attr-xp" data-name="system.attributes.strain"
+                               data-step="0"  {{checked (gt system.attributes.strain.value 0)}}>
                 </div>
             </div>
-            <div class="flexrow label-bar-left">&nbsp;</div>
+            <div class="flexrow label-bar-left-extension">
+                {{#each attrs.backgroundType.options as |option key|}}
+                    <span class="background-type{{#if (eq option.name ../attrs.backgroundType.value)}}-selected{{/if}}" data-name="{{option.name}}"
+                          data-label="{{option.label}}">{{option.label}}</span>
+                {{/each}}
+            </div>
         </div>
+
+
+<!--        <div class="toprow-label-col">-->
+<!--            <div class="flexrow xp-bar">-->
+<!--                Experience-->
+<!--            </div>-->
+<!--            <div class="flexrow strain-bar">-->
+<!--                Strain-->
+<!--                <div class="flexrow strain-bar-borderless">-->
+<!--                    <input type="radio" class="attr-xp" data-name="system.attributes.strain"-->
+<!--                           data-step="0"  {{checked (gt system.attributes.strain.value 0)}}>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="flexrow label-bar-left">&nbsp;</div>-->
+<!--        </div>-->
 
         {{#each attrs.levels.options as |level key|}}
             <div class="toprow-level-{{key}}-col">
