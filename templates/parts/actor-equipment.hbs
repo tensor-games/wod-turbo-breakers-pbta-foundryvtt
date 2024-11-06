@@ -40,6 +40,12 @@
                                 <input type="text" name="system.attributes.equipment.pack.{{key}}.label"
                                        value="{{item.label}}"/>
                             {{/if}}
+                            {{#times item.subUses.maxUses }}
+                                <input type="checkbox" class="attr-clock subuses"
+                                       data-name="system.attributes.equipment.pack.{{key}}.subUses"
+                                       data-step="{{@index}}"
+                                    {{checked (gt item.subUses.value @index)}} >
+                            {{/times}}
                         </div>
                         {{#if item.breakAfter}}
                 </div>
@@ -52,7 +58,7 @@
                 <div class="equipmentTab-column">
                 <div class="equipmentTab-onHand-row">
                     {{#each system.attrEquipTab.equipment.onHand as |item key|}}
-                        <div class="equipmentTab-item rel-width-{{item.relWidth}}">
+                        <div class="equipmentTab-item{{#if (gt (len item.options) 0)}}-with-options{{/if}} rel-width-{{item.relWidth}}">
                             {{#times item.maxUses }}
                                 <input type="checkbox" class="attr-clock"
                                        data-name="system.attributes.equipment.onHand.{{key}}"
@@ -65,15 +71,26 @@
                                 <input type="text" name="system.attributes.equipment.onHand.{{key}}.label"
                                        value="{{item.label}}"/>
                             {{/if}}
+                            {{#times item.subUses.maxUses}}
+                                <input type="checkbox" class="attr-clock subuses"
+                                       data-name="system.attributes.equipment.onHand.{{key}}.subUses"
+                                       data-step="{{@index}}"
+                                    {{checked (gt item.subUses.value @index)}} >
+                            {{/times}}
                         </div>
-                        {{#if item.breakAfter}}
+                        {{#if (gt (len item.options) 0)}}
                 </div>
                 <div class="equipmentTab-onHand-row">
+                    <div class="equipmentTab-item-options rel-width-{{item.relWidth}}">
+                        {{#each item.options as |label num|}}
+                            <input type="radio" class="attr-xp" data-step="{{@index}}"
+                                   data-name="system.attributes.equipment.onHand.{{key}}.chosenOption"
+                                   {{checked (eq (decrement item.chosenOption.value) @index)}}>
+                            {{label}}
+                        {{/each}}
+                    </div>
                         {{/if}}
-                        {{#if (eq key "specialWeapon")}}
-                </div>
-                <div class="equipmentTab-onHand-row">
-
+                        {{#if item.breakAfter}}
                 </div>
                 <div class="equipmentTab-onHand-row">
                         {{/if}}

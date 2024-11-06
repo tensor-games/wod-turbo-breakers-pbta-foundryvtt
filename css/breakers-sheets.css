@@ -811,6 +811,8 @@ div .strain-bar input[type=radio] {
 }
 
 div .strain-bar-left-background-extension {
+    padding-left: 0px;
+    padding-right: 10px;
     display: flex;
     flex-grow: 2;
     color: var(--breakers-primary-text-color);
@@ -821,8 +823,6 @@ div .strain-bar-left-background-extension {
 }
 
 div .strain-bar-left-experience-extension {
-    padding-left: 5px;
-    padding-right: 5px;
     display: flex;
     color: var(--breakers-primary-text-color);
     height: var(--breakers-topbar-strainbar-height);
@@ -838,23 +838,25 @@ div .strain-bar-left-experience-extension input[type=radio] {
     height: 1.25em !important;
 }
 
-span.background-type-selected {
+div .background-type-selected {
     display: inline-block;
-    padding-left: .25em;
-    padding-right: .25em;
+    padding-left: .5em;
+    padding-right: .5em;
     /*text-shadow: 3px 3px 3px 3px var(--breakers-interactive-bg-color);*/
     background: var(--breakers-interactive-bg-color);
     color: var(--breakers-tab-bg-active-color);
     text-align: center;
-    width: fit-content;
+    min-width: min-content;
+    max-width: max-content;
 }
 
-span.background-type {
+div .background-type {
     display: inline-block;
-    padding-left: .25em;
-    padding-right: .25em;
+    padding-left: .5em;
+    padding-right: .5em;
     text-align: center;
-    width: fit-content;
+    min-width: min-content;
+    max-width: max-content;
 }
 
 div .strain-bar-left {
@@ -961,8 +963,6 @@ div .label-bar-left-extension {
     border-right: 1px solid var(--breakers-interactive-bg-color);
     align-items: center;
     justify-content: start;
-    padding-left: 5px;
-    padding-right: 5px;
 }
 
 div .label-bar-left {
@@ -1010,7 +1010,6 @@ div .toprow-container {
     align-items: center;
     flex-wrap: nowrap;
     justify-content: center;
-    align-items: center;
     gap: 0;
     font-family: "Titillium Web", sans-serif;
     font-weight: 300;
@@ -1018,6 +1017,13 @@ div .toprow-container {
     text-transform: uppercase;
     position: relative;
     letter-spacing: 0.05rem;
+}
+
+.subuses {
+    width: 50% !important;
+    height: 50% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
 div .toprow-label-col {
@@ -1124,12 +1130,36 @@ div .equipmentTab-item-loot {
 
 div .equipmentTab-item {
     display: flex;
-    /*flex-direction: row;*/
     margin-left: 10px;
     margin-bottom: 10px;
     font-family: "Titillium Web", sans-serif;
     font-weight: 300;
     font-style: normal;
+}
+
+div .equipmentTab-item-with-options {
+    display: flex;
+    margin-left: 10px;
+    margin-bottom: 0;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+div .equipmentTab-item-options {
+    display: flex;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+div .equipmentTab-item-options input[type=radio] {
+    height: 70% !important;
+    margin-right: 1px !important;
 }
 
 div .equipmentTab-item input[type=text] {

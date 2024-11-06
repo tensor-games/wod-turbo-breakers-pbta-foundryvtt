@@ -146,144 +146,224 @@ export const configSheet = async () => {
                                 type: "defined",
                                 maxUses: 3,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 2,
                                 breakAfter: false,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             supplies: {
                                 label: "Supplies",
                                 type: "defined",
                                 maxUses: 3,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 2,
                                 breakAfter: true,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             repairKit: {
                                 label: "Repair&nbsp;Kit",
                                 type: "defined",
                                 maxUses: 1,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 1,
                                 breakAfter: false,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             techKit: {
                                 label: "Tech&nbsp;Kit",
                                 type: "defined",
                                 maxUses: 1,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 1,
                                 breakAfter: false,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             c4: {
                                 label: "C-4",
                                 type: "defined",
                                 maxUses: 1,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 1,
                                 breakAfter: true,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             climbingGear: {
                                 label: "Climbing&nbsp;Gear",
                                 type: "defined",
                                 maxUses: 1,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 2,
                                 breakAfter: false,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             heavyTools: {
                                 label: "Heavy&nbsp;Tools",
                                 type: "defined",
                                 maxUses: 1,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 2,
                                 breakAfter: true,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             hazmatGear: {
                                 label: "HAZMAT&nbsp;Gear",
                                 type: "defined",
                                 maxUses: 1,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 2,
                                 breakAfter: false,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             scubaGear: {
                                 label: "SCUBA&nbsp;Gear",
                                 type: "defined",
                                 maxUses: 1,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 2,
                                 breakAfter: true,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             extraPack1: {
                                 label: "",
                                 type: "free",
                                 maxUses: 2,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 3,
                                 breakAfter: true,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             extraPack2: {
                                 label: "",
                                 type: "free",
                                 maxUses: 2,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 3,
                                 breakAfter: true,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             extraPack3: {
                                 label: "",
                                 type: "free",
                                 maxUses: 2,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 3,
                                 breakAfter: true,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             extraPack4: {
                                 label: "",
                                 type: "free",
                                 maxUses: 2,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 3,
                                 breakAfter: true,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             extraPack5: {
                                 label: "",
                                 type: "free",
                                 maxUses: 2,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 3,
                                 breakAfter: true,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             extraPack6: {
                                 label: "",
                                 type: "free",
                                 maxUses: 2,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 3,
                                 breakAfter: true,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             loot: {
                                 label: "Loot",
                                 type: "defined",
                                 maxUses: 8,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 3,
                                 breakAfter: true,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             }
                         },
                         onHand: {
@@ -292,144 +372,231 @@ export const configSheet = async () => {
                                 type: "defined",
                                 maxUses: 0,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 3,
                                 breakAfter: true,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             armor1: {
                                 label: "Armor",
                                 type: "defined",
                                 maxUses: 1,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 1,
                                 breakAfter: false,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             armor2: {
                                 label: "Armor",
                                 type: "defined",
                                 maxUses: 1,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 1,
                                 breakAfter: false,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             shield: {
                                 label: "Shield",
                                 type: "defined",
                                 maxUses: 1,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 1,
                                 breakAfter: true,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             weapon1: {
                                 label: "Weapon",
                                 type: "defined",
                                 maxUses: 1,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 1,
                                 breakAfter: false,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             weapon2: {
                                 label: "Weapon",
                                 type: "defined",
                                 maxUses: 1,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 1,
                                 breakAfter: false,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             spacer: {
                                 label: "&nbsp;",
                                 type: "defined",
                                 maxUses: 0,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 1,
                                 breakAfter: true,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             specialWeapon: {
                                 label: "Special&nbsp;Weapon",
                                 type: "defined",
                                 maxUses: 2,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 3,
                                 breakAfter: true,
+                                options: {
+                                    1: "ap",
+                                    2: "far",
+                                    3: "heavy",
+                                    4: "spray",
+                                },
+                                chosenOption: {
+                                    value: ""
+                                },
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             grenades: {
                                 label: "Grenades",
                                 type: "defined",
                                 maxUses: 1,
                                 value: 0,
-                                subUses: 2,
                                 relWidth: 2,
                                 breakAfter: false,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 2,
+                                    value: 0,
+                                }
                             },
                             flashBangs: {
                                 label: "Flashbangs",
                                 type: "defined",
                                 maxUses: 1,
                                 value: 0,
-                                subUses: 2,
                                 relWidth: 2,
                                 breakAfter: true,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 2,
+                                    value: 0,
+                                }
                             },
                             nvgGaskMask: {
                                 label: "NVGs+&nbsp;Gas&nbsp;Mask",
                                 type: "defined",
                                 maxUses: 1,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 2,
                                 breakAfter: false,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             scanner: {
                                 label: "Scanner",
                                 type: "defined",
                                 maxUses: 1,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 2,
                                 breakAfter: true,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             extraHand1: {
                                 label: "",
                                 type: "free",
                                 maxUses: 2,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 3,
                                 breakAfter: true,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             extraHand2: {
                                 label: "",
                                 type: "free",
                                 maxUses: 2,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 3,
                                 breakAfter: true,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             extraHand3: {
                                 label: "",
                                 type: "free",
                                 maxUses: 2,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 3,
                                 breakAfter: true,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                             extraHand4: {
                                 label: "",
                                 type: "free",
                                 maxUses: 2,
                                 value: 0,
-                                subUses: 0,
                                 relWidth: 3,
                                 breakAfter: true,
+                                options: {},
+                                chosenOption: {value: ""},
+                                subUses: {
+                                    maxUses: 0,
+                                    value: 0,
+                                }
                             },
                         }
                     },

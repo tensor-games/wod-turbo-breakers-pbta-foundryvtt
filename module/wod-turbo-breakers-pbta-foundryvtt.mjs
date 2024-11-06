@@ -53,10 +53,20 @@ Hooks.once('init', () => {
     Handlebars.registerHelper("setTalents", async function (system) {
         return await game.packs.get("wod-turbo-breakers-pbta-foundryvtt.talents").getDocuments({type: "move"}).then((data) => {
             system['talents'] = data;
-            // console.log("DERP")
-            // console.log(data);
             return data;
         });
+    });
+
+    Handlebars.registerHelper('len', function(obj) {
+        return Object.keys(obj).length
+    });
+
+    Handlebars.registerHelper('decrement', function(val) {
+        return val - 1;
+    });
+
+    Handlebars.registerHelper('increment', function(val) {
+        return val + 1;
     });
 })
 
@@ -79,8 +89,6 @@ Hooks.once('pbtaSheetConfig', () => {
     if (isNewerVersion(game.system.version, '1.0.4')) {
         game.settings.set('pbta', 'hideHold', true);
     }
-
-    console.log("DERP DERP")
 
 });
 

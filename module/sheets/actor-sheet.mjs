@@ -14,17 +14,22 @@ export function BreakersActorSheetMixin(Base) {
         activateListeners(html) {
             super.activateListeners(html);
             html.on('click', '.background-type', this._onClickBGType.bind(this));
+            html.on('click', '.background-type-selected', this._onClickBGType.bind(this));
         }
 
         /** Handle clicking background type on sheet.
-         * @param {event} originating event
          * @private
+         * @param {event} event
          */
         _onClickBGType(event) {
             event.preventDefault();
             const element = event.target;
             const dataset = element.dataset;
-            this.actor.update({'system.attributes.backgroundType.value': dataset.name})
+            if(this.actor.system.attributes.backgroundType.value === dataset.name) {
+                this.actor.update({'system.attributes.backgroundType.value': ""})
+            } else {
+                this.actor.update({'system.attributes.backgroundType.value': dataset.name})
+            }
         }
 
         /** @override */
