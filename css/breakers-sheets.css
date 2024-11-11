@@ -656,8 +656,6 @@
   margin-top: 30px;
 }
 
-
-
 .pbta.sheet .cell__insert {
     display: flex;
     flex-direction: row;
@@ -671,6 +669,23 @@
     line-height: 0.9;
     position: relative;
     font-size: 18px;
+}
+
+div .stat-debility {
+    align-items: center;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0.05rem;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+div .stat-debility input[type=radio] {
+    height: 70% !important;
+    margin-right: 1px !important;
+    margin-left: 1px !important;
 }
 
 div .xp-bar {
@@ -1123,9 +1138,15 @@ div .equipmentTab-onHand-row {
     display: flex;
 }
 
-div .equipmentTab-item-loot {
-    justify-content: space-around;
-    padding-top: 5px;
+div .equipmentTab-header {
+    display: flex;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    margin-top: -5px;
+    font-family: 'Molot';
+    font-weight: 100;
+    font-size: 20px;
+    font-style: normal;
 }
 
 div .equipmentTab-item {
@@ -1136,6 +1157,17 @@ div .equipmentTab-item {
     font-weight: 300;
     font-style: normal;
 }
+
+div .equipmentTab-item input[type=checkbox] {
+    margin-left: 1px !important;
+    margin-right: 9px !important;
+}
+
+div .equipmentTab-item-with-options input[type=checkbox] {
+    margin-left: 1px !important;
+    margin-right: 9px !important;
+}
+
 
 div .equipmentTab-item-with-options {
     display: flex;
@@ -1148,7 +1180,7 @@ div .equipmentTab-item-with-options {
 
 div .equipmentTab-item-options {
     display: flex;
-    margin-left: 30px;
+    margin-left: 3px;
     margin-bottom: 10px;
     font-family: "Titillium Web", sans-serif;
     font-weight: 300;
@@ -1164,6 +1196,11 @@ div .equipmentTab-item-options input[type=radio] {
 
 div .equipmentTab-item input[type=text] {
     max-width: 15em;
+}
+
+div .equipmentTab-item-loot {
+    justify-content: space-around;
+    padding-top: 5px;
 }
 
 div .rel-width-1 {

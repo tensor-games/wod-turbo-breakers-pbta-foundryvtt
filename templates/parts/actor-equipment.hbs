@@ -25,6 +25,11 @@
                 <div class="equipmentTab-row">
                 <div class="equipmentTab-column">
                 <div class="equipmentTab-pack-row">
+                    <div class="equipmentTab-header rel-width-3">
+                        Pack
+                    </div>
+                </div>
+                <div class="equipmentTab-pack-row">
                     {{#each system.attrEquipTab.equipment.pack as |item key|}}
                         <div class="equipmentTab-item rel-width-{{item.relWidth}}
                             {{#if (eq key "loot")}} equipmentTab-item-loot{{/if}}">
@@ -56,6 +61,11 @@
                 </div>
 
                 <div class="equipmentTab-column">
+                <div class="equipmentTab-onHand-row">
+                    <div class="equipmentTab-header rel-width-3">
+                        Gear on Hand
+                    </div>
+                </div>
                 <div class="equipmentTab-onHand-row">
                     {{#each system.attrEquipTab.equipment.onHand as |item key|}}
                         <div class="equipmentTab-item{{#if (gt (len item.options) 0)}}-with-options{{/if}} rel-width-{{item.relWidth}}">

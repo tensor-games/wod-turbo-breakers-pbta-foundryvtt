@@ -30,15 +30,33 @@ export const configSheet = async () => {
                 stats: {
                     insight: {
                         label: "Insight",
-                        value: 0
+                        value: 0,
+                        debility: {
+                            name: "hazy",
+                            label: "Hazy",
+                            value: 0,
+                            effect: "-1 Speed",
+                        }
                     },
                     prowess: {
                         label: "Prowess",
-                        value: 0
+                        value: 0,
+                        debility: {
+                            name: "broken",
+                            label: "Broken",
+                            value: 0,
+                            effect: "-4 Max HP",
+                        }
                     },
                     resolve: {
                         label: "Resolve",
-                        value: 0
+                        value: 0,
+                        debility: {
+                            name: "weary",
+                            label: "Weary",
+                            value: 0,
+                            effect: "-1 Strain",
+                        }
                     },
                 },
                 attributes: {
