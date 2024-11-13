@@ -889,8 +889,7 @@ div .strain-bar-left {
 
 div .strain-bar-left input[type=text] {
     margin: 0 0 0 0 !important;
-    width: 1.25em !important;
-    height: 1.25em !important;
+    text-align: left !important;
 }
 
 div .strain-bar-right {
