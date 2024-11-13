@@ -656,6 +656,17 @@ export const configSheet = async () => {
                         creation: false
                     }
                 },
+                details: {
+                    notes: {
+                        label: "Notes",
+                        description: null,
+                        customLabel: false,
+                        userLabel: false,
+                        type: "LongText",
+                        value: "",
+                        playbook: true,
+                    }
+                }
             },
             npc: {
                 attributes: {

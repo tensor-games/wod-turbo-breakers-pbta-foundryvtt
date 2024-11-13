@@ -1284,3 +1284,24 @@ div .speed-cell {
     font-style: normal;
 }
 
+div .bio-header {
+    display: flex;
+    margin-top: 5px !important;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    margin-top: -5px;
+    font-family: 'Molot';
+    font-weight: 100;
+    font-size: 20px;
+    font-style: normal;
+    color: var(--breakers-primary-text-color);
+}
+
+div .bio-image {
+    height: 200px;
+    width: 200px;
+}
+
+.bio-image img {
+    max-height: 200px !important;
+}

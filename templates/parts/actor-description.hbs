@@ -2,14 +2,15 @@
     <div class="sheet-tab flexcol">
         {{#if isCharacter}}
             <section class="sheet-attributes flexrow">
-                <div class="cell cell--image">
+                <div class="cell cell--image bio-image">
                     <img class="profile-img" src="{{actor.img}}" data-edit="img" height="100" width="100"/>
                 </div>
                 <div class="cell cell--bio biography">
-                    <label class="cell__title">Biography</label>
+                    <div class="bio-header">Notes</div>
                     <div class="editor"><a class="editor-edit"><i class="fa-solid fa-edit"></i></a>
                         <div class="editor-content" data-engine="tinymce" data-collaborate="false"
-                             data-edit="system.details.biography.value"></div>
+                             data-edit="system.details.notes.value">
+                        </div>
                     </div>
                 </div>
             </section>
