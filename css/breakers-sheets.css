@@ -1297,6 +1297,10 @@ div .bio-header {
     color: var(--breakers-primary-text-color);
 }
 
+.biography .editor {
+    margin-left: 9px !important;
+}
+
 div .bio-image {
     height: 200px;
     width: 200px;

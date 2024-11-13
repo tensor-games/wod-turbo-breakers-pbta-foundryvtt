@@ -40,6 +40,16 @@ export function BreakersActorSheetMixin(Base) {
 		/** @override */
 		// async getData() {
 		// 	const context = await super.getData();
+        //     console.log(context)
+        //     context.enrichedDescription = await TextEditor.enrichHTML(
+        //         actor.system.details.notes.value,
+        //         {
+        //             // Only show secret blocks to owner
+        //             secrets: this.document.isOwner,
+        //             // For Actors and Items
+        //             rollData: this.document.getRollData
+        //         }
+        //     );
 		// 	return context;
 		// }
 	}
