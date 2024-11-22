@@ -47,7 +47,6 @@
       "system": "pbta",
       "path": "./packs/talents.db",
       "type": "Item",
-      "private":false,
       "flags":{
 
       }
