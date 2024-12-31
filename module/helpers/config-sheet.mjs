@@ -31,6 +31,8 @@ export const configSheet = async () => {
                     insight: {
                         label: "Insight",
                         value: 0,
+                        min: -2,
+                        max: 3,
                         debility: {
                             name: "hazy",
                             label: "Hazy",
@@ -41,6 +43,8 @@ export const configSheet = async () => {
                     prowess: {
                         label: "Prowess",
                         value: 0,
+                        min: -2,
+                        max: 3,
                         debility: {
                             name: "broken",
                             label: "Broken",
@@ -51,6 +55,8 @@ export const configSheet = async () => {
                     resolve: {
                         label: "Resolve",
                         value: 0,
+                        min: -2,
+                        max: 3,
                         debility: {
                             name: "weary",
                             label: "Weary",
@@ -633,19 +639,19 @@ export const configSheet = async () => {
                                 label: "Fast",
                                 packLimit: 3,
                                 handLimit: 2,
-                                value: 0,
+                                value: 1,
                             },
                             speed3: {
                                 label: "Normal",
                                 packLimit: 5,
                                 handLimit: 3,
-                                value: 0,
+                                value: 2,
                             },
                             speed4: {
                                 label: "Slow",
                                 packLimit: 8,
                                 handLimit: 5,
-                                value: 0,
+                                value: 3,
                             },
                         }
                     },

@@ -7,6 +7,12 @@
             -->
 
             <div class="equipmentTab-talent-column rel-width-1">
+                <div class="equipmentTab-header">
+                    Talents
+                </div>
+                {{#if (eq (len moves.talent) 0)}}
+                    <div style = "border:2px solid;padding: 5px">Select a Talent by clicking <i class="fas fa-atlas"></i> (Compendium Packs) in the upper right, then on <i class="fas fa-suitcase"></i> (Talents). Drag your choice of Talent here.</div>
+                {{/if}}
                 {{#each moves as |moveGroup moveKey|}}
                     <div class="cell cell--moves cell--group cell--{{moveKey}}" data-key="{{moveKey}}">
                         <ol class="items-list">
@@ -93,9 +99,10 @@
                 <div class="equipmentTab-onHand-row">
                     <div class="equipmentTab-item-options rel-width-{{item.relWidth}}">
                         {{#each item.options as |label num|}}
-                            <input type="radio" class="attr-xp" data-step="{{@index}}"
-                                   data-name="system.attributes.equipment.onHand.{{key}}.chosenOption"
-                                   {{checked (eq (decrement item.chosenOption.value) @index)}}>
+                            <input type="radio" class="radio-unsettable"
+                                   name="system.attributes.equipment.onHand.{{key}}.chosenOption.value"
+                                   value={{@index}}
+                                   {{checked (eq (toInt item.chosenOption.value) @index)}}>
                             {{label}}
                         {{/each}}
                     </div>
@@ -126,10 +133,10 @@
                                 (P):{{{item.packLimit}}} (H):{{{item.handLimit}}}
                             </div>
                             <div class="speed-cell">
-                                <input type="checkbox" class="attr-clock"
-                                       data-name="system.attributes.load.options.{{key}}"
-                                       data-step="{{0}}"
-                                    {{checked (gt item.value 0)}} >
+                                <input type="radio" class="radio-unsettable"
+                                       name="system.attributes.load.value"
+                                       value={{@index}}
+                                    {{checked (eq (toInt ../system.attrEquipTab.load.value) @index)}} >
                                 {{{item.label}}}
                             </div>
                         </div>
@@ -137,10 +144,7 @@
                 </div>
                 </div>
 
-
             </div>
         </div>
     </section>
 </div>
-{{log "EQUIP"}}
-{{log system}}

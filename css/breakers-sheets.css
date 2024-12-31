@@ -672,6 +672,7 @@
 }
 
 div .stat-debility {
+    flex:auto;
     align-items: center;
     font-family: "Titillium Web", sans-serif;
     font-weight: 300;
@@ -1033,13 +1034,6 @@ div .toprow-container {
     letter-spacing: 0.05rem;
 }
 
-.subuses {
-    width: 50% !important;
-    height: 50% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-}
-
 div .toprow-label-col {
     flex-grow: 1;
 }
@@ -1141,7 +1135,7 @@ div .equipmentTab-header {
     display: flex;
     margin-left: 10px;
     margin-bottom: 5px;
-    margin-top: -5px;
+    /*margin-top: -5px;*/
     font-family: 'Molot';
     font-weight: 100;
     font-size: 20px;
@@ -1165,6 +1159,13 @@ div .equipmentTab-item input[type=checkbox] {
 div .equipmentTab-item-with-options input[type=checkbox] {
     margin-left: 1px !important;
     margin-right: 9px !important;
+}
+
+div .equipmentTab-item input[type=checkbox].subuses {
+    width: 50% !important;
+    height: 50% !important;
+    margin-left: 3px !important;
+    margin-right: -3px !important;
 }
 
 

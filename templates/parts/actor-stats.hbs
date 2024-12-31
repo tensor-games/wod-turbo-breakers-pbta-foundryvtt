@@ -2,24 +2,29 @@
 	<ol class="stats-list flexrow">
 		{{#each system.stats as |stat key|}}
 		<li class="stat flexrow" data-stat="{{key}}">
+            <div style="flex:none">
+                <input
+                    class="stat-value"
+                    type="text"
+                    name="system.stats.{{key}}.value"
+                    value="{{#if stat.value includeZero=true}}{{numberFormat (minMaxStat stat) decimals=0 sign=true}}{{/if}}"
+                    data-dtype="Number"
+                    style="width: 2em"
+                />
+            </div>
+            <div style="flex:none;padding-top:5px;padding-left:5px">
 			<label
 				for="system.stats.{{key}}.value"
 				class="cell__title stat-rollable rollable"
 				data-mod="{{stat.value}}"
 				data-label="{{stat.label}}"
 				>
-				<span class="stat-icon">
+                <span class="stat-icon">
 					<i class="fas fa-dice-d6"></i>
 				</span>
-                <input
-                    class="stat-value"
-                    type="text"
-                    name="system.stats.{{key}}.value"
-                    value="{{#if stat.value includeZero=true}}{{numberFormat stat.value decimals=0 sign=true}}{{/if}}"
-                    data-dtype="Number"
-                />
 				{{ stat.label }}
 			</label>
+            </div>
 			{{#if (and (eq key "token") ../statToken)}}
 			<span class="token-modif" data-action="decrease" data-attr="stats.{{key}}.value">-</span>
 			<input
@@ -38,12 +43,6 @@
 					{{../statToggle.label}}
 				</label>
 				{{/if}}
-            <div class="stat-debility">
-                <input type="radio" class="attr-xp" data-step="0"
-                       data-name="system.stats.{{key}}.debility"
-                    {{checked (eq stat.debility.value 1)}}>
-                {{stat.debility.label}} ({{stat.debility.effect}})
-            </div>
 				{{#if ../statClock}}
 				<div class="cell__clock flexrow">
 					{{#times stat.steps.max}}
@@ -52,6 +51,12 @@
 				</div>
 				{{/if}}
 			{{/if}}
+            <div class="stat-debility">
+                <input type="radio" class="attr-xp" data-step="0"
+                       data-name="system.stats.{{key}}.debility"
+                    {{checked (eq stat.debility.value 1)}}>
+                {{stat.debility.label}} ({{stat.debility.effect}})
+            </div>
 		</li>
 		{{/each}}
 		{{#if (and editable (objLen system.stats) statShifting)}}
@@ -76,5 +81,3 @@
 		{{/if}}
 	</ol>
 </div>
-{{log "STATS"}}
-{{log system}}

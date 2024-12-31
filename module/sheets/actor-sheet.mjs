@@ -15,6 +15,7 @@ export function BreakersActorSheetMixin(Base) {
             super.activateListeners(html);
             html.on('click', '.background-type', this._onClickBGType.bind(this));
             html.on('click', '.background-type-selected', this._onClickBGType.bind(this));
+            html.on('click', '.radio-unsettable', this._onClickUnsettableRadio.bind(this));
         }
 
         /** Handle clicking background type on sheet.
@@ -29,6 +30,30 @@ export function BreakersActorSheetMixin(Base) {
                 this.actor.update({'system.attributes.backgroundType.value': ""})
             } else {
                 this.actor.update({'system.attributes.backgroundType.value': dataset.name})
+            }
+        }
+
+        /** Handle unsettable radio buttons
+         * @private
+         * @param {event} event
+         */
+        _onClickUnsettableRadio(event) {
+            const element = event.target;
+            if (element.type !== 'radio') {
+                return;
+            }
+            function resolve(obj, path){
+                var r=path.split(".");
+                if(path){return resolve(obj[r.shift()], r.join("."));}
+                return obj
+            }
+            const eName = element.name;
+            var path = element.name.split('.');
+            const currentVal = resolve(this.actor[path.shift()], path.join('.'));
+            if (currentVal === element.value) {
+                event.preventDefault();
+                var jsonString = '{\"' + eName + '\": \"-1\"}';
+                this.actor.update(JSON.parse(jsonString))
             }
         }
 

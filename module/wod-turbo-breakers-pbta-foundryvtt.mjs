@@ -58,7 +58,25 @@ Hooks.once('init', () => {
     });
 
     Handlebars.registerHelper('len', function(obj) {
+        // Only implement if no native implementation is available
+        if (typeof Array.isArray === 'undefined') {
+            Array.isArray = function(obj) {
+                return Object.prototype.toString.call(obj) === '[object Array]';
+            }
+        }
+        if (Array.isArray(obj)) {
+            return obj.length;
+        }
         return Object.keys(obj).length
+    });
+
+    Handlebars.registerHelper('minMaxStat', function(obj, system) {
+        console.log(obj)
+        return Math.max(Math.min(obj.value, obj.max), obj.min);
+    });
+
+    Handlebars.registerHelper('toInt', function(str) {
+        return parseInt(str,10);
     });
 
     Handlebars.registerHelper('decrement', function(val) {
